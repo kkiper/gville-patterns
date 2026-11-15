@@ -1,3 +1,5 @@
+import { chicagoDateString } from './time.js';
+
 // Normalize an Open-Meteo hourly forecast (requested with timezone=America/Chicago,
 // so time strings are already local and are kept as-is).
 const FIELDS = {
@@ -28,4 +30,18 @@ export function normalizeOpenMeteo(json) {
     byDate.get(date).push(row);
   }
   return { hours, days: [...byDate].map(([date, hs]) => ({ date, hours: hs })) };
+}
+
+// A response with hours but mostly-null temp/wind means the API changed shape.
+export function weatherLooksBroken(d) {
+  const hs = d?.hours || [];
+  if (!hs.length) return true;
+  const bad = hs.filter((h) => h.tempF == null || h.windMph == null).length;
+  return bad / hs.length > 0.5;
+}
+
+// Drop forecast days that are already over in Chicago.
+export function upcomingDays(days, now) {
+  const today = chicagoDateString(now);
+  return (days || []).filter((d) => d.date >= today);
 }

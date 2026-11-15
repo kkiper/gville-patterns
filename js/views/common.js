@@ -3,7 +3,7 @@ import { COMPASS16, compassIndex } from '../lib/geo.js';
 import { rankBaits, MIN_MATCHES } from '../lib/patterns.js';
 
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-export const dash = (v, unit = '') => (v == null ? '—' : `${v}${unit}`);
+export const dash = (v, unit = '') => (v == null ? '—' : esc(`${v}${unit}`));
 export const compass = (deg) => (deg == null ? '—' : COMPASS16[compassIndex(deg)]);
 export const fmtTime = (iso, opts = { hour: 'numeric', minute: '2-digit' }) => new Date(iso).toLocaleString('en-US', { timeZone: 'America/Chicago', ...opts });
 export const dots = (n) => (n == null ? '<span class="muted">—</span>' : `<span class="dots">${'●'.repeat(n)}<span class="off">${'●'.repeat(5 - n)}</span></span>`);

@@ -64,3 +64,13 @@ export function sectionCounts(records) {
   for (const r of records) if (r.section) out[r.section] = (out[r.section] || 0) + 1;
   return out;
 }
+
+// Map shading levels 0..5 per section; nothing is shaded until enough matches carry a section.
+export function heatLevels(counts) {
+  const total = Object.values(counts).reduce((a, b) => a + b, 0);
+  if (total < MIN_MATCHES) return { levels: {}, total };
+  const max = Math.max(...Object.values(counts));
+  const levels = {};
+  for (const [k, v] of Object.entries(counts)) levels[k] = Math.max(1, Math.round((v / max) * 5));
+  return { levels, total };
+}

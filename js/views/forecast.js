@@ -2,7 +2,8 @@
 import { solunarPeriods, moonPhase } from '../lib/solunar.js';
 import { dayRating, hourScore } from '../lib/bite.js';
 import { likeToday } from '../lib/patterns.js';
-import { chicagoToDate } from '../lib/time.js';
+import { chicagoToDate, chicagoDateString } from '../lib/time.js';
+import { upcomingDays } from '../lib/weather.js';
 import * as sheet from './sheet.js';
 import { esc, dash, compass, fmtTime, dots, baitSummary, currentWaterTemp } from './common.js';
 
@@ -31,7 +32,8 @@ const windArrow = (deg) => (deg == null ? '' : `<span class="arrow" style="trans
 
 export function render(root, ctx) {
   const w = ctx.data.weather;
-  const days = w?.days || [];
+  const days = upcomingDays(w?.days, ctx.now);
+  const today = chicagoDateString(ctx.now);
   const hours = w?.hours || [];
   const matches = likeToday(ctx.data.patterns || [], { date: ctx.now, waterTempF: currentWaterTemp(ctx.data) });
   const cards = days.slice(0, 7).map((d) => {
@@ -42,13 +44,13 @@ export function render(root, ctx) {
   root.innerHTML = `<div class="page"><h1>Forecast</h1>
     ${cards.length ? `<div class="strip">${cards.map(({ d, s, r }, i) => `
       <button class="day" data-i="${i}">
-        <div class="name">${i === 0 ? 'Today' : fmtTime(`${d.date}T12:00:00-06:00`, { weekday: 'short' })}</div>
+        <div class="name">${d.date === today ? 'Today' : fmtTime(`${d.date}T12:00:00-06:00`, { weekday: 'short' })}</div>
         <div class="muted small">${fmtTime(`${d.date}T12:00:00-06:00`, { month: 'short', day: 'numeric' })}</div>
         <div class="big" style="font-size:20px;margin:6px 0">${dash(s.hi, '°')}<span class="muted" style="font-size:14px"> / ${dash(s.lo, '°')}</span></div>
         <div class="small">${windArrow(s.windDir)} ${s.windLo == null ? '—' : `${s.windLo}–${s.windHi}`} mph</div>
         <div class="small muted">${trendArrow(s.pressTrend)}</div>
         <div style="margin-top:6px">${dots(r.score)}</div>
-      </button>`).join('')}</div>` : '<div class="card"><p>No forecast loaded yet.</p><p class="small muted">The forecast appears after the hourly data update runs.</p></div>'}
+      </button>`).join('')}</div>` : '<div class="card"><p>No current forecast.</p><p class="small muted">The forecast appears after the hourly data update runs.</p></div>'}
     <p class="small muted">Bite rating: starts at 3; +1 falling pressure, +1 wind 5–15 mph, +1 major moon period (+½ minor); −1 fast-rising pressure, −1 wind over 20 mph.</p>
     <h2>Patterns like today</h2><div class="card">${baitSummary(matches)}</div>
     <p class="source">Forecast: ${esc(w?.source || 'Open-Meteo')}${w?.updated ? ` · updated ${fmtTime(w.updated, { weekday: 'short', hour: 'numeric', minute: '2-digit' })}` : ''}</p>

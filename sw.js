@@ -1,14 +1,15 @@
 // Offline support: app shell precache, network-first data, cache-first lake tiles.
-const SHELL = 'gville-shell-v1';
+const SHELL = 'gville-shell-v2';
 const DATA = 'gville-data-v1';
 const TILES = 'gville-tiles-v1';
 const MAX_TILES = 2000;
 const SHELL_FILES = [
   './', 'index.html', 'css/app.css', 'manifest.webmanifest', 'icons/icon-192.png',
   'js/app.js', 'js/data.js', 'js/store.js',
-  'js/views/map.js', 'js/views/sheet.js', 'js/views/forecast.js', 'js/views/water.js', 'js/views/patterns.js', 'js/views/log.js',
+  'js/views/map.js', 'js/views/sheet.js', 'js/views/common.js', 'js/views/forecast.js', 'js/views/water.js', 'js/views/patterns.js', 'js/views/log.js',
   'js/lib/geo.js', 'js/lib/exposure.js', 'js/lib/solunar.js', 'js/lib/bite.js', 'js/lib/time.js', 'js/lib/weather.js',
   'js/lib/water.js', 'js/lib/patterns.js', 'js/lib/catches.js', 'js/lib/fetch-calc.js',
+  'data/sections.json', 'data/patterns.json', 'data/section-fetch.json', 'data/weather.json', 'data/water.json',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
 ];
 const BBOX = { s: 34.2, w: -86.6, n: 34.9, e: -85.8 };
@@ -40,6 +41,7 @@ self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
   if (url.pathname.includes('/data/') && url.pathname.endsWith('.json')) {
     e.respondWith(fetch(e.request).then((res) => {
+      if (!res.ok) return caches.match(e.request).then((hit) => hit || res);
       const copy = res.clone();
       caches.open(DATA).then((c) => c.put(e.request, copy));
       return res;

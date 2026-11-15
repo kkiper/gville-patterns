@@ -19,7 +19,7 @@ export async function render(root, ctx) {
     <p id="msg" class="small" role="status"></p>
     <h2>${catches.length} catch${catches.length === 1 ? '' : 'es'}</h2>
     ${catches.map((c) => `<div class="card small">
-      <div class="row between"><b>${esc(c.species || 'Bass')}${c.weightLb ? ` · ${c.weightLb} lb` : ''}</b><span class="muted">${fmtTime(c.time, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}</span></div>
+      <div class="row between"><b>${esc(c.species || 'Bass')}${c.weightLb ? ` · ${esc(c.weightLb)} lb` : ''}</b><span class="muted">${fmtTime(c.time, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}</span></div>
       <div>${esc(c.bait || '')}${c.notes ? ` — ${esc(c.notes)}` : ''}</div>
       <div class="muted" style="margin-top:4px">${dash(c.conditions?.tempF, '°')} air · ${dash(c.conditions?.windMph, ' mph')} ${compass(c.conditions?.windFromDeg)} · ${dash(c.conditions?.pressureHpa != null ? Math.round(c.conditions.pressureHpa) : null, ' hPa')} · pool ${dash(c.conditions?.poolFt, ' ft')} · water ${dash(c.conditions?.waterTempF, '°')}</div>
     </div>`).join('') || '<p class="muted small">No catches yet. Logged catches save the weather and water conditions automatically.</p>'}
@@ -27,7 +27,7 @@ export async function render(root, ctx) {
 
   const msg = (t, bad) => { const m = root.querySelector('#msg'); m.textContent = t; m.style.color = bad ? 'var(--bad)' : 'var(--accent)'; };
 
-  root.querySelector('#new').addEventListener('click', () => openForm(ctx, () => render(root, ctx)));
+  root.querySelector('#new').addEventListener('click', () => openForm(ctx, () => render(root, ctx), catches[0]?.latlng));
 
   root.querySelector('#export').addEventListener('click', async () => {
     const blob = new Blob([JSON.stringify(exportPayload(catches), null, 1)], { type: 'application/json' });
@@ -49,43 +49,54 @@ export async function render(root, ctx) {
   });
 }
 
-function openForm(ctx, done) {
+function openForm(ctx, done, last) {
   const body = sheet.open(`<h3 style="margin:4px 0">Log a catch</h3>
     <p class="small muted" id="loc-status">Getting your location…</p>
     <div id="pick" style="height:200px;border-radius:12px;overflow:hidden;display:none"></div>
+    <div class="row"><div style="flex:1"><label>Latitude</label><input id="c-lat" inputmode="decimal"></div>
+      <div style="flex:1"><label>Longitude</label><input id="c-lng" inputmode="decimal"></div></div>
+    ${last ? '<button class="btn ghost small" id="c-last" style="margin-top:8px">Use last catch location</button>' : ''}
     <label>Species</label><select id="c-species">${SPECIES.map((s) => `<option>${s}</option>`).join('')}</select>
     <label>Weight (lb)</label><input id="c-weight" inputmode="decimal" placeholder="e.g. 4.5">
     <label>Bait</label><input id="c-bait" placeholder="e.g. red lipless">
     <label>Notes (water temp, depth, cover…)</label><textarea id="c-notes" rows="2"></textarea>
     <button class="btn" id="c-save" style="width:100%;margin-top:12px" disabled>Save</button>`);
   let latlng = null;
+  let marker = null, m = null;
   const status = body.querySelector('#loc-status');
   const save = body.querySelector('#c-save');
-  const setLoc = (ll, how) => { latlng = ll; save.disabled = false; status.textContent = `Location: ${how} (${ll[0].toFixed(4)}, ${ll[1].toFixed(4)})`; };
+  const lat = body.querySelector('#c-lat'), lng = body.querySelector('#c-lng');
+  const valid = (a, b) => Number.isFinite(a) && Number.isFinite(b) && Math.abs(a) <= 90 && Math.abs(b) <= 180;
+  function setLoc(ll, how, fromInputs = false) {
+    latlng = ll; save.disabled = false;
+    status.textContent = `Location: ${how}. Tap the map or edit the numbers to adjust.`;
+    if (!fromInputs) { lat.value = ll[0].toFixed(5); lng.value = ll[1].toFixed(5); }
+    if (m) { marker ? marker.setLatLng(ll) : (marker = L.marker(ll).addTo(m)); }
+  }
+  const fromInputs = () => {
+    const a = parseFloat(lat.value), b = parseFloat(lng.value);
+    if (valid(a, b)) setLoc([a, b], 'entered', true); else { latlng = null; save.disabled = true; }
+  };
+  lat.addEventListener('input', fromInputs); lng.addEventListener('input', fromInputs);
+  body.querySelector('#c-last')?.addEventListener('click', () => setLoc(last, 'last catch'));
 
-  function pickOnMap(reason) {
-    status.textContent = `${reason} Tap where you caught it.`;
+  // Map picker is always offered when the map library is available.
+  if (window.L) {
     const box = body.querySelector('#pick');
-    if (!window.L) { status.textContent = `${reason} The map isn't available offline yet, so this catch can't be placed.`; return; }
     box.style.display = 'block';
-    const m = L.map(box, { zoomControl: false }).setView([34.40, -86.27], 10);
+    m = L.map(box, { zoomControl: false }).setView([34.40, -86.27], 10);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains: 'abcd', maxZoom: 18 }).addTo(m);
-    let marker = null;
-    m.on('click', (e) => {
-      const ll = [e.latlng.lat, e.latlng.lng];
-      marker ? marker.setLatLng(e.latlng) : (marker = L.marker(e.latlng).addTo(m));
-      setLoc(ll, 'picked on map');
-    });
+    m.on('click', (e) => setLoc([e.latlng.lat, e.latlng.lng], 'picked on map'));
     setTimeout(() => m.invalidateSize(), 300);
   }
-
+  const noGps = (reason) => { if (!latlng) status.textContent = `${reason} ${window.L ? 'Tap the map or enter' : 'Enter'} the coordinates${last ? ', or use your last catch location' : ''}.`; };
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
-      (p) => setLoc([p.coords.latitude, p.coords.longitude], 'GPS'),
-      () => pickOnMap('Location unavailable.'),
+      (p) => { if (!latlng) { setLoc([p.coords.latitude, p.coords.longitude], 'GPS'); m?.setView(latlng, 13); } },
+      () => noGps('Location unavailable.'),
       { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 },
     );
-  } else pickOnMap('This device has no GPS access.');
+  } else noGps('This device has no GPS access.');
 
   save.addEventListener('click', async () => {
     const c = makeCatch({
@@ -96,7 +107,12 @@ function openForm(ctx, done) {
       notes: body.querySelector('#c-notes').value.trim(),
       now: new Date(), weather: ctx.data.weather, water: ctx.data.water,
     });
-    await saveCatch(c);
+    try {
+      await saveCatch(c);
+    } catch (e) {
+      status.textContent = `Couldn't save: ${e.message || e}`;
+      return;
+    }
     sheet.close();
     done();
   });

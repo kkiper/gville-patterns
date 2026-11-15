@@ -1,6 +1,6 @@
 // Map: lake sections, Best Areas heat, wind exposure with a forecast-hour slider.
 import { exposure } from '../lib/exposure.js';
-import { likeToday, sectionCounts, filterPatterns } from '../lib/patterns.js';
+import { likeToday, sectionCounts, filterPatterns, heatLevels } from '../lib/patterns.js';
 import { haversineMiles } from '../lib/geo.js';
 import { loadCatches } from '../store.js';
 import { chicagoToDate } from '../lib/time.js';
@@ -14,7 +14,7 @@ const EXPOSURE_COLOR = { windblown: '#ff6b6b', partial: '#ffb547', calm: null };
 export async function render(root, ctx) {
   const { sections, sectionFetch, weather, patterns } = ctx.data;
   root.innerHTML = `<div class="map-wrap"><div id="map"></div>
-    <div class="map-title">G-Ville Patterns</div>
+    <div class="map-title">G-Ville Patterns<div class="small muted" id="heat-note" style="font-weight:400"></div></div>
     <div class="layer-picker">${Object.entries(LAYERS).map(([k, v]) => `<button data-layer="${k}" class="${on[k] ? 'on' : ''}">${v}</button>`).join('')}</div>
     <div class="time-slider" hidden><div class="row between small"><span id="slider-label"></span><span class="muted" id="slider-wind"></span></div>
       <input type="range" id="slider" min="0" value="0"></div></div>`;
@@ -32,10 +32,12 @@ export async function render(root, ctx) {
   const hours = weather?.hours || [];
   let hourIdx = currentHourIndex(hours, ctx.now);
   const matches = likeToday(patterns || [], { date: ctx.now, waterTempF: currentWaterTemp(ctx.data) });
-  const counts = sectionCounts(matches);
-  const maxCount = Math.max(1, ...Object.values(counts));
+  const heat = heatLevels(sectionCounts(matches));
   const catches = await loadCatches().catch(() => []);
   const group = L.layerGroup().addTo(map);
+  root.querySelector('#heat-note').textContent = heat.levels && Object.keys(heat.levels).length
+    ? `Best Areas: ${heat.total} of ${matches.length} matching patterns name a section`
+    : `Best Areas: too few patterns this time of year name a section (${heat.total})`;
 
   const exposureFor = (s) => {
     const h = hours[hourIdx];
@@ -46,7 +48,7 @@ export async function render(root, ctx) {
     group.clearLayers();
     for (const s of sections || []) {
       const ex = on.wind ? exposureFor(s) : null;
-      const level = Math.ceil(((counts[s.id] || 0) / maxCount) * 5); // 0..5
+      const level = heat.levels[s.id] || 0; // 0..5
       const circle = L.circle(s.center, {
         radius: s.radius_mi * 1609.34,
         color: ex && EXPOSURE_COLOR[ex] ? EXPOSURE_COLOR[ex] : on.sections ? '#8fa3b8' : 'transparent',

@@ -49,6 +49,7 @@ export function render(root, ctx) {
     <div class="card"><div class="row between"><h3>Water temp</h3><span class="big">${usgs?.waterTempF ? usgs.waterTempF.value + '°' : '—'}</span></div>
       ${usgs?.waterTempF ? `<p class="source">USGS 03573500 · ${fmtTime(usgs.waterTempF.time, { weekday: 'short', hour: 'numeric', minute: '2-digit' })}</p>`
         : '<p class="small muted">No live reading on Guntersville. Log yours from the boat in the Log tab notes.</p>'}</div>
+    ${w?.carried?.length ? `<p class="small" style="color:var(--warn)">Couldn't refresh ${w.carried.map(esc).join(', ')} this hour; showing the last good reading (see its time).</p>` : ''}
     ${w?.sourceErrors?.length ? `<p class="small muted">Last update missed: ${w.sourceErrors.map(esc).join('; ')}</p>` : ''}
     ${!w ? '<p class="muted">Water data appears after the hourly data update runs.</p>' : ''}
   </div>`;

@@ -17,6 +17,7 @@ with sync_playwright() as p:
     page = ctx.new_page()
     errors = []
     page.on("pageerror", lambda e: errors.append(str(e)))
+    page.clock.set_fixed_time("2026-11-15T19:00:00Z")  # sample data covers Nov 15-16
     page.goto(BASE); page.wait_for_timeout(800)
     check("map tab shows offline-library message", "map library didn't load" in page.inner_text("#view"))
     check("stale banner visible for old data", page.is_visible("#banner") and "last updated" in page.inner_text("#banner"))
@@ -52,7 +53,21 @@ with sync_playwright() as p:
     ctx2.route("https://unpkg.com/**", lambda r: r.abort())
     p2 = ctx2.new_page(); p2.goto(BASE + "#"); p2.wait_for_timeout(600)
     p2.click(".tabs [data-tab=log]"); p2.wait_for_timeout(300); p2.click("#new"); p2.wait_for_timeout(11500)
-    check("denied location explains map pick", "can't be placed" in p2.inner_text("#loc-status") or "Tap where" in p2.inner_text("#loc-status"))
+    check("denied location asks for coordinates", "nter the coordinates" in p2.inner_text("#loc-status"))
+    p2.fill("#c-lat", "34.41"); p2.fill("#c-lng", "-86.25"); p2.wait_for_timeout(100)
+    check("manual coordinates enable save without map", p2.is_enabled("#c-save"))
+    p2.click("#c-save"); p2.wait_for_timeout(500)
+    check("offline/no-map catch saved", "1 catch" in p2.inner_text("#view").lower())
+    # GPS case: coordinates are shown and editable
+    page.click(".tabs [data-tab=log]"); page.wait_for_timeout(300); page.click("#new"); page.wait_for_timeout(800)
+    check("GPS fills editable coordinates", page.input_value("#c-lat").startswith("34.4"))
+    page.locator(".sheet-grip").click()
+    # Past forecast days are not shown as Today
+    ctx3 = b.new_context(viewport={"width": 390, "height": 844}, service_workers="block", timezone_id="America/Chicago")
+    ctx3.route("https://unpkg.com/**", lambda r: r.abort())
+    p3 = ctx3.new_page(); p3.clock.set_fixed_time("2026-11-16T18:00:00Z"); p3.goto(BASE); p3.wait_for_timeout(600)
+    p3.click(".tabs [data-tab=forecast]"); p3.wait_for_timeout(400)
+    check("yesterday's forecast dropped", p3.locator(".day").count() == 1 and "16" in p3.locator(".day").first.inner_text())
     page.screenshot(path="/tmp/smoke-log.png")
     check("no page errors", not errors)
     if errors: print(errors)

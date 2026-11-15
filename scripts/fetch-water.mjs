@@ -1,7 +1,7 @@
 // Hourly: NOAA NWPS pool/stage gauges + USGS discharge/water temp into data/water.json.
 // TVA's generation schedule has no known public JSON endpoint yet, so generation stays null.
 import { normalizeNwps, normalizeUsgs } from '../js/lib/water.js';
-import { writeDataSafely } from './lib/write-data.mjs';
+import { writeDataSafely, carryForward, readPrevious } from './lib/write-data.mjs';
 
 const SOURCES = {
   pool: { gauge: 'GVHA1', url: 'https://api.water.noaa.gov/nwps/v1/gauges/GVHA1/stageflow', norm: normalizeNwps, ok: (d) => d.observed.length },
@@ -25,6 +25,8 @@ for (const [key, s] of Object.entries(SOURCES)) {
 }
 out.sourceErrors = failures;
 const allFailed = failures.length === Object.keys(SOURCES).length;
-const r = writeDataSafely('data/water.json', out, { isEmpty: () => allFailed, error: failures.join('; ') });
+// Keep last good readings for failed sources; each block carries its own observation times.
+const merged = carryForward(readPrevious('data/water.json'), out, Object.keys(SOURCES));
+const r = writeDataSafely('data/water.json', merged, { isEmpty: () => allFailed, error: failures.join('; ') });
 if (r.written && failures.length) console.log(`water.json written with missing sources: ${failures.join('; ')}`);
 else console.log(r.written ? 'water.json: all sources ok' : `water.json kept: ${r.reason}`);

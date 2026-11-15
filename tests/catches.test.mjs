@@ -10,7 +10,7 @@ const water = { pool: { observed: [{ time: 't1', value: 594.1 }, { time: 't2', v
 const now = new Date('2026-11-15T17:20:00Z'); // 11:20 CST
 
 test('snapshot picks nearest hour and latest water', () => {
-  assert.deepEqual(snapshotConditions(now, weather, water), { tempF: 57, windMph: 9, windFromDeg: 210, pressureHpa: 1017, poolFt: 594.2, waterTempF: 58, generation: null });
+  assert.deepEqual(snapshotConditions(now, weather, water), { tempF: 57, windMph: 9, windFromDeg: 210, pressureHpa: 1017, poolFt: 594.2, waterTempF: 58, generation: null, weatherUpdated: null, waterUpdated: null });
 });
 test('snapshot with missing water data', () => {
   const s = snapshotConditions(now, weather, null);

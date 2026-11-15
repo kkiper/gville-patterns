@@ -16,3 +16,16 @@ export function writeDataSafely(path, data, { isEmpty, error } = {}) {
   writeFileSync(path, JSON.stringify({ ...prev, errors }));
   return { written: false, reason: error || 'empty result' };
 }
+
+// For multi-source files: keep the previous block for any source that failed this run.
+export function carryForward(prev, next, keys) {
+  const out = { ...next, carried: [] };
+  for (const k of keys) {
+    if (next[k] == null && prev?.[k] != null) { out[k] = prev[k]; out.carried.push(k); }
+  }
+  return out;
+}
+
+export function readPrevious(path) {
+  try { return existsSync(path) ? JSON.parse(readFileSync(path, 'utf8')) : null; } catch { return null; }
+}
