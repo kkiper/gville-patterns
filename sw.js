@@ -57,5 +57,9 @@ self.addEventListener('fetch', (e) => {
     }));
     return;
   }
-  e.respondWith(caches.match(e.request).then((hit) => hit || fetch(e.request)));
+  // App files: network first so updates show up; cache when offline.
+  e.respondWith(fetch(e.request).then((res) => {
+    if (res.ok && url.origin === location.origin) { const copy = res.clone(); caches.open(SHELL).then((c) => c.put(e.request, copy)); }
+    return res;
+  }).catch(() => caches.match(e.request)));
 });
