@@ -37,7 +37,12 @@ export function filterPatterns(records, { months, tempRange, technique, section,
 export function likeToday(records, { date, waterTempF }) {
   const m = Number(chicagoDateString(date).slice(5, 7));
   const months = [((m + 10) % 12) + 1, m, (m % 12) + 1];
-  return filterPatterns(records, { months, tempRange: waterTempF == null ? undefined : [waterTempF - 5, waterTempF + 5] });
+  const byMonth = filterPatterns(records, { months });
+  if (waterTempF == null) return byMonth;
+  const byTemp = filterPatterns(byMonth, { tempRange: [waterTempF - 5, waterTempF + 5] });
+  if (byTemp.length >= MIN_MATCHES) return byTemp;
+  // Most reports don't give water temp; fall back to season-only matching and say so.
+  return Object.assign(byMonth, { tempFallback: true });
 }
 
 export function rankBaits(records) {

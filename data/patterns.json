@@ -1,1 +1,2583 @@
-[]
+[
+ {
+  "id": "2014-classic-1",
+  "date": "2014-02-21",
+  "event": "2014 Bassmaster Classic",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "rain night before day 1",
+   "wind": null,
+   "water_color": "muddy over grass after rain",
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "crankbait",
+  "baits": [
+   "bladed jig",
+   "Rapala DT-6 (demon)",
+   "prototype wide-wobble crankbait"
+  ],
+  "cover_structure": "milfoil on a 3-4 ft creek flat, then riprap at 7-10 ft",
+  "section": "spring-creek",
+  "summary": "Started on a shallow milfoil patch with a bladed jig, then slow-rolled a mid-diving crank parallel to causeway riprap. A warming trend pulled fish up toward the rocks.",
+  "source_url": "https://www.bassmaster.com/tips/patterns-ruled-guntersville-classic"
+ },
+ {
+  "id": "2014-classic-3",
+  "date": "2014-02-21",
+  "event": "2014 Bassmaster Classic",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "rain night before day 1",
+   "wind": null,
+   "water_color": "muddy over grass after rain",
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "suspending lipless",
+  "baits": [
+   "3/8 oz Megabass Flat Slap (lead-taped to suspend)",
+   "bladed jig with swimbait trailer"
+  ],
+  "cover_structure": "2-4 ft milfoil/hydrilla pockets in a backwater flat",
+  "section": null,
+  "summary": "Fished a weighted lipless bait slowly with pauses through shallow grass pockets off the main lake. Fish moved shallower every day.",
+  "source_url": "https://www.bassmaster.com/tips/patterns-ruled-guntersville-classic"
+ },
+ {
+  "id": "2014-classic-4",
+  "date": "2014-02-21",
+  "event": "2014 Bassmaster Classic",
+  "finish": 4,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "rain night before day 1",
+   "wind": null,
+   "water_color": "muddy over grass after rain",
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "crankbait",
+  "baits": [
+   "Rapala DT-6 (pumpkinseed)"
+  ],
+  "cover_structure": "causeway riprap, then a 4-6 ft main-lake grass ridge",
+  "section": null,
+  "summary": "Slow-cranked a DT-6 tight to causeway riprap with frequent pauses. Moved to a main-lake grass ridge on the last day.",
+  "source_url": "https://www.bassmaster.com/tips/patterns-ruled-guntersville-classic"
+ },
+ {
+  "id": "2015-flw-se-1",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "deep bridge fishing",
+  "baits": [],
+  "cover_structure": "deep water around bridges",
+  "section": null,
+  "summary": "Won on deeper fish holding around bridge structure; baits weren't detailed in the recap.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-flw-se-2",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "slow-rolled spinnerbait / swimbait",
+  "baits": [
+   "3/4 oz chartreuse Red Eye Shad",
+   "swimbait on 1 oz head"
+  ],
+  "cover_structure": "boat-sized shell bed on a flat below a main-lake point",
+  "section": null,
+  "summary": "Slow-rolled a heavy lipless and a swimbait over a small shell bed near a river channel. Pre-spawn fish later schooled on bait there.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-flw-se-3",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "junk fishing",
+  "baits": [
+   "umbrella rig with small swimbaits",
+   "brown ChatterBait",
+   "shad crankbait"
+  ],
+  "cover_structure": "docks, mud banks, grass, laydowns and offshore spots",
+  "section": null,
+  "summary": "Mixed an umbrella rig, vibrating jig and crankbait across many cover types. No single area carried the weight.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-flw-se-4",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 4,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "umbrella rig / squarebill",
+  "baits": [
+   "umbrella rig with 5 in swimbaits",
+   "squarebill crankbait",
+   "Rage Blade"
+  ],
+  "cover_structure": "rocky points and ~12 ft grass lines plus shallow cove grass",
+  "section": null,
+  "summary": "Paired an umbrella rig on rocky points and deeper grass lines with shallow cove grass. Spooky spawners showed up by the final day.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-flw-se-5",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 5,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "swimbait on staging point",
+  "baits": [
+   "Z-Boss 20 crankbait",
+   "True Bass swimbaits on 3/4 oz heads"
+  ],
+  "cover_structure": "18 ft drop on a creek-mouth point",
+  "section": null,
+  "summary": "Worked swimbaits on the drop of a creek-mouth point where pre-spawn fish staged. Pressure wore the spot down over three days.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-flw-se-6",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 6,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "lipless + dock jig",
+  "baits": [
+   "red Rat-L-Trap",
+   "5/16 oz jig"
+  ],
+  "cover_structure": "shallow bait-filled flat, then docks",
+  "section": null,
+  "summary": "Ran a red lipless on a shallow flat early, then pitched a light jig through a string of docks.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-flw-se-7",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 7,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "lipless / umbrella rig in shallow grass",
+  "baits": [
+   "1/4 oz Red Eye Shad",
+   "light umbrella rig with 3.8 in swimbaits"
+  ],
+  "cover_structure": "shallow grass",
+  "section": "spring-creek",
+  "summary": "Fished light lipless baits and a small umbrella rig over shallow grass in Spring Creek. Weekend boat traffic hurt the last day.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-flw-se-8",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 8,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "lipless off pad stems + flipping",
+  "baits": [
+   "1/2 oz Cali craw Rat-L-Trap",
+   "D Bomb on 1 1/4 oz tungsten"
+  ],
+  "cover_structure": "shallow milfoil and pad stems",
+  "section": "roseberry-goose-pond",
+  "summary": "Deflected a craw lipless off pad stems and flipped milfoil around Goose Pond until the spot gave out.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-flw-se-9",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 9,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "swimbait / umbrella rig",
+  "baits": [
+   "7 in paddle-tail swimbait",
+   "umbrella rig with 3.8 in swimbaits"
+  ],
+  "cover_structure": "small main-river areas, then shallow water",
+  "section": null,
+  "summary": "Fished big swimbaits and an umbrella rig in small main-river areas before moving shallow on day 3.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-flw-se-10",
+  "date": "2015-03-19",
+  "event": "2015 FLW Series Southeast (Rayovac)",
+  "finish": 10,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "umbrella rig on points",
+  "baits": [
+   "umbrella rig with blades",
+   "4.5 in blue gizzard Shadalicious"
+  ],
+  "cover_structure": "main-lake points where pre-spawn fish staged",
+  "section": null,
+  "summary": "Threw a bladed umbrella rig with gizzard-shad swimbaits on main-lake points every day.",
+  "source_url": "https://majorleaguefishing.com/?p=157029"
+ },
+ {
+  "id": "2015-elite-1",
+  "date": "2015-04-09",
+  "event": "2015 Bassmaster Elite Series",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "stormy day 2",
+   "wind": "S shifting to NE behind a front on day 3",
+   "water_color": null,
+   "level_trend": null,
+   "front": "post-front day 3",
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "swimbait",
+  "baits": [
+   "7 in paddle-tail swimbait (chartreuse shad / ayu)",
+   "drop shot and worm for bed fish"
+  ],
+  "cover_structure": "laydowns plus flats, points and humps",
+  "section": "siebold-creek",
+  "summary": "Made long, steady swimbait casts over flats and humps and shorter ones to laydowns, with wood producing about half the weight. Fished Siebold and Town Creek areas.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-SKEETGUNT.html"
+ },
+ {
+  "id": "2017-flw-tour-1",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "shallow crankbait",
+  "baits": [
+   "shallow-running crankbaits"
+  ],
+  "cover_structure": null,
+  "section": null,
+  "summary": "Won mostly on shallow-running crankbaits; the recap didn't detail colors or areas.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2017-flw-tour-2",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "crankbait + dock skipping",
+  "baits": [
+   "Damiki Tremor 80",
+   "squarebill",
+   "jig skipped under slips"
+  ],
+  "cover_structure": "bare hole in thick eelgrass near marina docks",
+  "section": null,
+  "summary": "Cranked a bare spot inside thick eelgrass and skipped a jig under nearby marina slips.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2017-flw-tour-3",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "deep crankbait / football jig",
+  "baits": [
+   "Jackall Muscle Deep 7+ (crawdad)",
+   "Jackall Jaco 58",
+   "Squad Minnow jerkbait",
+   "3/4 oz football jig"
+  ],
+  "cover_structure": "shell bars, rock veins, stumps and river turns",
+  "section": "main-river-ledges",
+  "summary": "Cranked and dragged a football jig over shell, rock and stumps along river-channel turns.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2017-flw-tour-4",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 4,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "lipless in grass",
+  "baits": [
+   "Rattl'n Vibe (rusty gold)",
+   "Berkley Warpig (red craw)"
+  ],
+  "cover_structure": "eelgrass ditch edges and points in 5-7 ft",
+  "section": null,
+  "summary": "Ripped lipless baits through eelgrass along ditch edges and turns mid-lake.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2017-flw-tour-5",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 5,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": "varied; red in stained, chrome in clear",
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "lipless on grass humps",
+  "baits": [
+   "SPRO Aruku Shad 3/8 and 1/2 oz"
+  ],
+  "cover_structure": "grass-topped humps at 4-8 ft",
+  "section": "siebold-creek",
+  "summary": "Fished lipless baits over grass-topped humps, using red/orange in stained water and chrome in clear.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2017-flw-tour-6",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 6,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "lipless in grass",
+  "baits": [
+   "Rattl'n Vibe (matte craw)"
+  ],
+  "cover_structure": "eelgrass in 4-6 ft, river bars and a point",
+  "section": "comer-bridge",
+  "summary": "Worked a craw lipless across shallow eelgrass and river bars near the B.B. Comer Bridge.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2017-flw-tour-7",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 7,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "jig on channel swings",
+  "baits": [
+   "1/2 oz jig with Super Chunk Jr",
+   "shaky head",
+   "FlatMaster crankbait"
+  ],
+  "cover_structure": "rock and wood on channel-swing banks",
+  "section": null,
+  "summary": "Pitched a smaller jig to rock and wood on channel-swing banks in creeks and the main lake. Cold water favored a small profile.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2017-flw-tour-8",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 8,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "vibrating jig / swim jig",
+  "baits": [
+   "homemade vibrating jig",
+   "swim jig (bream)",
+   "Quake 70",
+   "Crush 250MD (lava craw)"
+  ],
+  "cover_structure": "tall eelgrass in a drain and a grassy dip on a river ledge",
+  "section": null,
+  "summary": "Fished tall eelgrass in a drain and a grass-lined depression on a river ledge with a vibrating jig and swim jig.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2017-flw-tour-9",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 9,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "crankbait in current",
+  "baits": [
+   "Rapala DT6 (brown craw)"
+  ],
+  "cover_structure": "eelgrass acting as a current break",
+  "section": "comer-bridge",
+  "summary": "Cranked eelgrass that broke the winter current near Comer Bridge, where pre-spawn fish sat out of the flow.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2017-flw-tour-10",
+  "date": "2017-02-02",
+  "event": "2017 FLW Tour opener",
+  "finish": 10,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / early pre-spawn",
+  "technique": "lipless in grass bowls",
+  "baits": [
+   "Rat-L-Traps, mixed sizes/colors"
+  ],
+  "cover_structure": "grass points in subtle depressions",
+  "section": null,
+  "summary": "Ran lipless baits over grass points in shallow bowls close to the main river.",
+  "source_url": "https://majorleaguefishing.com/?p=159315"
+ },
+ {
+  "id": "2018-costa-champ-1",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "punching mats",
+  "baits": [
+   "beaver-style baits (black/blue, green pumpkin)"
+  ],
+  "cover_structure": "grass mats",
+  "section": null,
+  "summary": "Punched beaver-style baits through grass mats.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2018-costa-champ-2",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "umbrella rig",
+  "baits": [
+   "umbrella rig"
+  ],
+  "cover_structure": "two shallow grassy areas",
+  "section": null,
+  "summary": "Threw an umbrella rig over two shallow grass areas.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2018-costa-champ-3",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "punching",
+  "baits": [
+   "Kinky Beaver (magic craw)"
+  ],
+  "cover_structure": "grass",
+  "section": null,
+  "summary": "Punched a craw-colored beaver through grass.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2018-costa-champ-4",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 4,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "vibrating jig",
+  "baits": [
+   "white vibrating jig with swimbait trailer"
+  ],
+  "cover_structure": "grass with fish boiling on the surface",
+  "section": null,
+  "summary": "Fished a white vibrating jig where bass were busting bait over grass.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2018-costa-champ-5",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 5,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "weedless swimbait / umbrella rig",
+  "baits": [
+   "5 in Zoom Swimmer",
+   "umbrella rig with 3.8 in swimbaits"
+  ],
+  "cover_structure": "outer milfoil edges",
+  "section": null,
+  "summary": "Swam weedless swimbaits and an umbrella rig along the outside edge of milfoil.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2018-costa-champ-6",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 6,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "umbrella rig in ditches",
+  "baits": [
+   "umbrella rig with 4 in swimmers"
+  ],
+  "cover_structure": "ditches through grass",
+  "section": null,
+  "summary": "Pulled an umbrella rig through ditches cutting the grass.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2018-costa-champ-7",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 7,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "outside grass edges",
+  "baits": [
+   "5 in swimbait",
+   "squarebill (smoke shad)",
+   "umbrella rig"
+  ],
+  "cover_structure": "outside edges of main-river grass",
+  "section": null,
+  "summary": "Worked swimbaits, a squarebill and an umbrella rig along main-river grass edges.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2018-costa-champ-8",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 8,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "spinnerbait / buzzbait on flats",
+  "baits": [
+   "3/8 oz sexy shad spinnerbait",
+   "1/2 oz chartreuse/white buzzbait"
+  ],
+  "cover_structure": "isolated grass clumps on flats",
+  "section": null,
+  "summary": "Covered flats with a willow spinnerbait and a buzzbait around isolated grass clumps.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2018-costa-champ-9",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 9,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "soft jerkbait / frog",
+  "baits": [
+   "white soft jerkbait",
+   "frog"
+  ],
+  "cover_structure": "shallow water",
+  "section": null,
+  "summary": "Fished a white soft jerkbait and a frog shallow.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2018-costa-champ-10",
+  "date": "2018-11-01",
+  "event": "2018 Costa FLW Series Championship",
+  "finish": 10,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "umbrella rig in a grass hole",
+  "baits": [
+   "umbrella rig with 3 in swimbaits",
+   "chrome Rat-L-Trap"
+  ],
+  "cover_structure": "one hole in a grass bed",
+  "section": null,
+  "summary": "Most weight came on an umbrella rig fished in a single opening in a grass bed.",
+  "source_url": "https://majorleaguefishing.com/?p=161489"
+ },
+ {
+  "id": "2020-classic-1",
+  "date": "2020-03-06",
+  "event": "2020 Bassmaster Classic",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain before and on day 1",
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": "cold front then warming",
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "jerkbait",
+  "baits": [
+   "Megabass Vision 110+1",
+   "1/2 oz ChatterBait (red/green pumpkin)",
+   "dock jig with chunk trailer"
+  ],
+  "cover_structure": "3/4-mile causeway riprap with a grassy flat and fallen boulders",
+  "section": "browns-creek",
+  "summary": "Fished a jerkbait painfully slow with long pauses along the Browns Creek causeway in still-cold water, adding a vibrating jig on grass and a jig on docks.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-HCWBMC20A.html"
+ },
+ {
+  "id": "2020-classic-2",
+  "date": "2020-03-06",
+  "event": "2020 Bassmaster Classic",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain before and on day 1",
+   "wind": null,
+   "water_color": "muddy early, clearing by day 2",
+   "level_trend": null,
+   "front": "cold front then warming",
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "vibrating jig / lipless",
+  "baits": [
+   "1/2 oz ChatterBait (fire craw)",
+   "Red Eye Shad (crawdad)"
+  ],
+  "cover_structure": "scattered eelgrass clumps and patches",
+  "section": "honeycomb-creek",
+  "summary": "Used a vibrating jig when calm and a lipless when wind laid the grass over. Water muddied after day-1 rain then cleared.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-HCWBMC20A.html"
+ },
+ {
+  "id": "2020-classic-x2",
+  "date": "2020-03-06",
+  "event": "2020 Bassmaster Classic",
+  "finish": null,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain before and on day 1",
+   "wind": null,
+   "water_color": "muddy early, clearing by day 2",
+   "level_trend": null,
+   "front": "cold front then warming",
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "crankbait in grass",
+  "baits": [
+   "Speed N crankbait (chili bowl)",
+   "1/2 oz lipless (red)"
+  ],
+  "cover_structure": "eelgrass ditches and high spots at 4-6 ft in creek backs",
+  "section": null,
+  "summary": "Cranked eelgrass ditches and high spots in the backs of creeks, falling back on lipless baits.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-HCWBMC20.html"
+ },
+ {
+  "id": "2020-classic-x3",
+  "date": "2020-03-06",
+  "event": "2020 Bassmaster Classic",
+  "finish": null,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain before and on day 1",
+   "wind": null,
+   "water_color": "muddy early, clearing by day 2",
+   "level_trend": null,
+   "front": "cold front then warming",
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "vibrating jig",
+  "baits": [
+   "1/2 oz ChatterBait (clearwater shad) with swimbait trailer"
+  ],
+  "cover_structure": "hydrilla on bars at 5-6 ft",
+  "section": null,
+  "summary": "Ran a vibrating jig over hydrilla-topped bars, finding a clean-water stretch while most was muddy.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-HCWBMC20.html"
+ },
+ {
+  "id": "2020-classic-x4",
+  "date": "2020-03-06",
+  "event": "2020 Bassmaster Classic",
+  "finish": null,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain before and on day 1",
+   "wind": null,
+   "water_color": "muddy early, clearing by day 2",
+   "level_trend": null,
+   "front": "cold front then warming",
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "crankbait / swimbait",
+  "baits": [
+   "Speed N crankbait",
+   "5 in swimbait on 3/8 oz head"
+  ],
+  "cover_structure": "submerged eelgrass at ~5 ft in staging areas",
+  "section": null,
+  "summary": "Cranked submerged grass in pre-spawn staging areas and added a shallow swimbait on day 3.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-HCWBMC20.html"
+ },
+ {
+  "id": "2020-elite-1",
+  "date": "2020-10-01",
+  "event": "2020 Bassmaster Elite",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": "cooling weather",
+   "backfilled": false
+  },
+  "season_phase": "fall transition",
+  "technique": "bladed jig",
+  "baits": [
+   "1/2 oz Thunder Cricket (green pumpkin)",
+   "white frog"
+  ],
+  "cover_structure": "eelgrass edges dropping 2-8 ft along the main river",
+  "section": null,
+  "summary": "Ran a bladed jig along eelgrass edges where current and big gizzard shad held fish, plus a frog on an upriver mat.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-BSS20TFWLG.html"
+ },
+ {
+  "id": "2020-elite-2",
+  "date": "2020-10-01",
+  "event": "2020 Bassmaster Elite",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": "cooling weather",
+   "backfilled": false
+  },
+  "season_phase": "fall transition",
+  "technique": "crankbait on bridges",
+  "baits": [
+   "Frittside 5 (honey shad / cream pie)",
+   "Senko on docks"
+  ],
+  "cover_structure": "bridge riprap and steep banks into creek channels",
+  "section": null,
+  "summary": "Cranked riprap at four bridges and steep creek-channel banks, avoiding grass entirely.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-BSS20TFWLG.html"
+ },
+ {
+  "id": "2020-elite-x2",
+  "date": "2020-10-01",
+  "event": "2020 Bassmaster Elite",
+  "finish": null,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": "cooling weather",
+   "backfilled": false
+  },
+  "season_phase": "fall transition",
+  "technique": "flipping mats",
+  "baits": [
+   "Bad Mama / Spine Craw (black-blue, green pumpkin) on 1 1/4 oz"
+  ],
+  "cover_structure": "mats with open water underneath",
+  "section": null,
+  "summary": "Flipped heavy weights through mats that had open water below the canopy.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-BSS20TFWLG.html"
+ },
+ {
+  "id": "2020-elite-x3",
+  "date": "2020-10-01",
+  "event": "2020 Bassmaster Elite",
+  "finish": null,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": "cooling weather",
+   "backfilled": false
+  },
+  "season_phase": "fall transition",
+  "technique": "flipping trash mats / buzzbait",
+  "baits": [
+   "creature bait",
+   "1/4 oz white buzzbait"
+  ],
+  "cover_structure": "eelgrass/hydrilla/milfoil trash mats in ~4 ft",
+  "section": null,
+  "summary": "Flipped floating trash mats in about 4 ft and threw a buzzbait over grass flats.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-BSS20TFWLG.html"
+ },
+ {
+  "id": "2020-elite-x4",
+  "date": "2020-10-01",
+  "event": "2020 Bassmaster Elite",
+  "finish": null,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": "cooling weather",
+   "backfilled": false
+  },
+  "season_phase": "fall transition",
+  "technique": "flipping / punching",
+  "baits": [
+   "D Bomb on 1/2 and 1 1/2 oz",
+   "ChatterBait",
+   "1/2 oz jig"
+  ],
+  "cover_structure": "wood and grass, deeper fish to 20 ft",
+  "section": null,
+  "summary": "Mixed flipping wood, punching grass, a shallow vibrating jig and a jig for deeper fish.",
+  "source_url": "https://www.tacklewarehouse.com/catpage-BSS20TFWLG.html"
+ },
+ {
+  "id": "2021-elite-1",
+  "date": "2021-05-20",
+  "event": "2021 Bassmaster Elite",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": "windy day 2",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "flipping / punching",
+  "baits": [
+   "Zoom Z Hog on 3/4 oz tungsten",
+   "1 oz punching jig"
+  ],
+  "cover_structure": "milfoil field and matted grass near an island",
+  "section": "comer-bridge",
+  "summary": "Flipped and punched thick mats and a milfoil field around Goose Pond and an island below Comer Bridge. Thicker mats held the best fish.",
+  "source_url": "https://bassmaster.com/news/kuphall-conquers-guntersville"
+ },
+ {
+  "id": "2021-elite-2",
+  "date": "2021-05-20",
+  "event": "2021 Bassmaster Elite",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": "windy day 2",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "flipping / vibrating jig",
+  "baits": [
+   "Zoom Z Craw on 3/4-1 oz",
+   "ChatterBait with fluke trailer",
+   "wacky worm"
+  ],
+  "cover_structure": "topped-out but unmatted shallow grass",
+  "section": "roseberry-goose-pond",
+  "summary": "Flipped and ran a vibrating jig over shallow grass that reached the surface around Goose Pond and above Comer Bridge.",
+  "source_url": "https://bassmaster.com/news/kuphall-conquers-guntersville"
+ },
+ {
+  "id": "2021-elite-3",
+  "date": "2021-05-20",
+  "event": "2021 Bassmaster Elite",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": "windy day 2",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "punching / frog",
+  "baits": [
+   "Rage Rodent",
+   "Sexy Frog",
+   "swim jig with craw"
+  ],
+  "cover_structure": "mats and bream beds",
+  "section": null,
+  "summary": "Punched mats and fished a frog and swim jig around bream beds, swim jig early in low light.",
+  "source_url": "https://bassmaster.com/news/kuphall-conquers-guntersville"
+ },
+ {
+  "id": "2022-toyota-central-1",
+  "date": "2022-02-22",
+  "event": "2022 Toyota Series Central Division",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain",
+   "wind": null,
+   "water_color": null,
+   "level_trend": "rising, high outflows",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / pre-spawn",
+  "technique": "lipless",
+  "baits": [
+   "1/2 oz Rat-L-Trap"
+  ],
+  "cover_structure": null,
+  "section": null,
+  "summary": "One lipless crankbait caught nearly everything.",
+  "source_url": "https://fishingboating.world/news/246704/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-central-2",
+  "date": "2022-02-22",
+  "event": "2022 Toyota Series Central Division",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain",
+   "wind": null,
+   "water_color": null,
+   "level_trend": "rising, high outflows",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / pre-spawn",
+  "technique": "lipless / vibrating jig",
+  "baits": [
+   "1/2 oz Rat-L-Trap",
+   "3/8 oz ChatterBait",
+   "Leap FrogZ"
+  ],
+  "cover_structure": null,
+  "section": null,
+  "summary": "Rotated a lipless, a vibrating jig and a soft frog.",
+  "source_url": "https://fishingboating.world/news/246704/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-central-3",
+  "date": "2022-02-22",
+  "event": "2022 Toyota Series Central Division",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain",
+   "wind": null,
+   "water_color": null,
+   "level_trend": "rising, high outflows",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / pre-spawn",
+  "technique": "lipless",
+  "baits": [
+   "5/8 oz XCalibur XR50",
+   "wacky stickbait under docks"
+  ],
+  "cover_structure": "docks for the stickbait",
+  "section": null,
+  "summary": "A heavy lipless produced most fish, with a wacky stickbait skipped under docks.",
+  "source_url": "https://fishingboating.world/news/246704/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-central-4",
+  "date": "2022-02-22",
+  "event": "2022 Toyota Series Central Division",
+  "finish": 4,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain",
+   "wind": null,
+   "water_color": null,
+   "level_trend": "rising, high outflows",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / pre-spawn",
+  "technique": "vibrating jig / lipless",
+  "baits": [
+   "ChatterBait with Easy Shiner",
+   "One Knocker, Warpig, Rat-L-Trap, Shaker Z (craw)"
+  ],
+  "cover_structure": "grass",
+  "section": null,
+  "summary": "Mixed a vibrating jig with several craw-colored lipless baits around grass.",
+  "source_url": "https://fishingboating.world/news/246704/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-central-6",
+  "date": "2022-02-22",
+  "event": "2022 Toyota Series Central Division",
+  "finish": 6,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain",
+   "wind": null,
+   "water_color": null,
+   "level_trend": "rising, high outflows",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / pre-spawn",
+  "technique": "vibrating jig / lipless",
+  "baits": [
+   "1/2 oz ChatterBait with craw trailer",
+   "1/2 oz Quake lipless"
+  ],
+  "cover_structure": null,
+  "section": null,
+  "summary": "Split time between a vibrating jig and a lipless.",
+  "source_url": "https://fishingboating.world/news/246704/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-central-7",
+  "date": "2022-02-22",
+  "event": "2022 Toyota Series Central Division",
+  "finish": 7,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain",
+   "wind": null,
+   "water_color": null,
+   "level_trend": "rising, high outflows",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / pre-spawn",
+  "technique": "crankbait / bladed jig / lipless",
+  "baits": [
+   "Chick Magnet",
+   "Thunder Cricket with Z Craw",
+   "One Knocker"
+  ],
+  "cover_structure": null,
+  "section": null,
+  "summary": "Used a flat-sided crank, a bladed jig and a lipless.",
+  "source_url": "https://fishingboating.world/news/246704/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-central-8",
+  "date": "2022-02-22",
+  "event": "2022 Toyota Series Central Division",
+  "finish": 8,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain",
+   "wind": null,
+   "water_color": null,
+   "level_trend": "rising, high outflows",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / pre-spawn",
+  "technique": "lipless",
+  "baits": [
+   "1/2 oz Hard Knocker"
+  ],
+  "cover_structure": null,
+  "section": null,
+  "summary": "Caught almost everything on one lipless crankbait.",
+  "source_url": "https://fishingboating.world/news/246704/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-central-9",
+  "date": "2022-02-22",
+  "event": "2022 Toyota Series Central Division",
+  "finish": 9,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain",
+   "wind": null,
+   "water_color": null,
+   "level_trend": "rising, high outflows",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / pre-spawn",
+  "technique": "vibrating jig",
+  "baits": [
+   "3/8-1/2 oz ChatterBait (hot craw) with Razor Shadz"
+  ],
+  "cover_structure": null,
+  "section": null,
+  "summary": "Relied on vibrating jigs in two weights.",
+  "source_url": "https://fishingboating.world/news/246704/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-central-10",
+  "date": "2022-02-22",
+  "event": "2022 Toyota Series Central Division",
+  "finish": 10,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain",
+   "wind": null,
+   "water_color": null,
+   "level_trend": "rising, high outflows",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter / pre-spawn",
+  "technique": "lipless on grass lines",
+  "baits": [
+   "1/2 oz One Knocker (sunset craw)"
+  ],
+  "cover_structure": "grass lines",
+  "section": null,
+  "summary": "Worked a craw lipless along grass lines.",
+  "source_url": "https://fishingboating.world/news/246704/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-twpc-1",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "offshore ledge",
+  "baits": [
+   "10.5 in worm",
+   "4.5 in swimbait (blue crack)"
+  ],
+  "cover_structure": "offshore ledge mid-lake",
+  "section": null,
+  "summary": "Fished big worms and a swimbait on a mid-lake ledge, with some shallow sight fishing.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-twpc-2",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "spoon / Neko rig",
+  "baits": [
+   "6 in flutter spoon",
+   "Neko-rigged magnum finesse worm"
+  ],
+  "cover_structure": null,
+  "section": "town-creek",
+  "summary": "Worked slowly around one area within sight of the State Park with a spoon and Neko rig.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-twpc-3",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "vibrating jig on grass",
+  "baits": [
+   "ChatterBait Jack Hammer"
+  ],
+  "cover_structure": "grass at 5-10 ft, shallow and offshore",
+  "section": null,
+  "summary": "Ran between grass spots at 5-10 ft with vibrating jigs.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-twpc-4",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 4,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "wacky rig on bream beds",
+  "baits": [
+   "wacky-rigged stick worm"
+  ],
+  "cover_structure": "shallow coves with bream beds",
+  "section": null,
+  "summary": "Sight-fished bream beds in coves after a weather change ended the spawn bite.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-twpc-5",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 5,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "drop shot on ledges",
+  "baits": [
+   "4 in Roboworm (morning dawn)"
+  ],
+  "cover_structure": "ledges with scattered fish",
+  "section": null,
+  "summary": "Drop-shotted scattered fish on ledges with little current running.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-twpc-6",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 6,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "deep crankbait / wacky rig",
+  "baits": [
+   "Strike King 10XD then 6XD",
+   "wacky rig"
+  ],
+  "cover_structure": "deep shell bars and shallow bluegill beds",
+  "section": null,
+  "summary": "Graphed deep shell bars for a big crank, then wacky-rigged bluegill beds, between South Sauty and Honeycomb.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-twpc-7",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 7,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "crankbait on schools",
+  "baits": [
+   "deep-diving crankbaits"
+  ],
+  "cover_structure": "a school on an offshore spot",
+  "section": null,
+  "summary": "Cranked a morning school, then searched upriver.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-twpc-8",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 8,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "wacky rig on bream beds",
+  "baits": [
+   "green pumpkin Senko"
+  ],
+  "cover_structure": "shallow bream beds",
+  "section": null,
+  "summary": "Wacky-rigged a stick worm on bream beds; the bite came late morning.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-twpc-9",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 9,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "ledge school",
+  "baits": [
+   "shad crankbait",
+   "Neko-rigged worm"
+  ],
+  "cover_structure": "single high spot on a river ledge",
+  "section": null,
+  "summary": "Cranked and Neko-rigged one small high spot on a river ledge, fish sitting on the current side.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-twpc-10",
+  "date": "2022-05-12",
+  "event": "2022 Tackle Warehouse Pro Circuit",
+  "finish": 10,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "run-and-gun schools",
+  "baits": [
+   "Strike King 6XD",
+   "hair jig",
+   "8 in flutter spoon"
+  ],
+  "cover_structure": "big offshore schools near eelgrass",
+  "section": null,
+  "summary": "Ran schools from the State Park to the dam with a crank, hair jig and spoon; fish only bit in the mornings.",
+  "source_url": "https://majorleaguefishing.com/pro-circuit/top-10-patterns-on-lake-guntersville/"
+ },
+ {
+  "id": "2022-toyota-champ-1",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "umbrella rig on suspended fish",
+  "baits": [
+   "umbrella rig",
+   "6th Sense Divine swimbait",
+   "blade bait"
+  ],
+  "cover_structure": "suspended fish around bait at ~20 ft",
+  "section": null,
+  "summary": "Chased suspended bass around bait with an umbrella rig, swimbait and blade bait.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-champ-2",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "jerkbait / crankbait",
+  "baits": [
+   "Vision 110+1 (French pearl)",
+   "Damiki DC 300"
+  ],
+  "cover_structure": "hump tops at 3-4 ft and edges at 10-14 ft",
+  "section": null,
+  "summary": "Jerked and cranked hump tops and their deeper edges.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-champ-3",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "topwater / swimbait on suspended fish",
+  "baits": [
+   "Sexy Dawg Hard Knock",
+   "4.5 in Shadalicious"
+  ],
+  "cover_structure": "suspended fish over bait",
+  "section": null,
+  "summary": "Used a walking bait for fish under 6 ft and a swimbait for deeper suspended fish.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-champ-4",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 4,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "shallow jigs / punching",
+  "baits": [
+   "vibrating jig (green pumpkin)",
+   "jig with craw",
+   "Gambler Stinger on 3/4 oz"
+  ],
+  "cover_structure": "docks, grass and laydowns at 2-5 ft on secondary points",
+  "section": null,
+  "summary": "Targeted bass feeding on bluegill around shallow docks and laydowns in the first third of creeks.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-champ-5",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 5,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "jerkbait on grass lines",
+  "baits": [
+   "Vision 110+1 (M shad)"
+  ],
+  "cover_structure": "laydowns early, then grass lines with bait",
+  "section": null,
+  "summary": "Flipped laydowns on day 1, then jerked grass lines with bait for the rest.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-champ-6",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 6,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "vibrating jig",
+  "baits": [
+   "1/2 oz ChatterBait with Live Magic Shad"
+  ],
+  "cover_structure": null,
+  "section": "roseberry-goose-pond",
+  "summary": "Junk-fished a vibrating jig from Goose Pond up to the Highway 35 bridge.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-champ-7",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 7,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "offshore swimbait",
+  "baits": [
+   "Baby Z-Too on 1/4 oz",
+   "4.5 in Shadalicious on 1/2 oz"
+  ],
+  "cover_structure": "creek channels at 20-25 ft",
+  "section": null,
+  "summary": "Graphed offshore fish on creek channels and fished swimbaits to them.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-champ-8",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 8,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "dock jig / pad bait",
+  "baits": [
+   "1/2 oz structure jig with Baby Rage Craw",
+   "Pad Perch (warmouth)"
+  ],
+  "cover_structure": "~2 ft docks and grass patches",
+  "section": null,
+  "summary": "Pitched a jig to shallow docks and fished a hollow-body bait over grass.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-champ-9",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 9,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "punching",
+  "baits": [
+   "Gambler Boxer Craw on 1.5 oz tungsten",
+   "lipless backup"
+  ],
+  "cover_structure": "grass",
+  "section": null,
+  "summary": "Punched grass in Dry Creek with a lipless as backup.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2022-toyota-champ-10",
+  "date": "2022-11-10",
+  "event": "2022 Toyota Series Championship",
+  "finish": 10,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "sunny",
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "fall",
+  "technique": "topwater over bars",
+  "baits": [
+   "Whopper Plopper 130 (bone)",
+   "Shower Blows 125 (bone)"
+  ],
+  "cover_structure": "~6 ft bars with hydrilla/eelgrass",
+  "section": null,
+  "summary": "Walked and plopped topwaters over grassy river bars in bright sun.",
+  "source_url": "https://fishingboating.world/news/256140/Top-10-baits-and-patterns-from-Lake-Guntersville"
+ },
+ {
+  "id": "2024-kayak-1",
+  "date": "2024-05-18",
+  "event": "2024 Bassmaster Kayak Series",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "cloudy day 1",
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "Neko rig dead-sticking",
+  "baits": [
+   "Neko-rigged Hit Worm",
+   "topwater"
+  ],
+  "cover_structure": "offshore grassy point to hard bottom (3 ft top, 30 ft drop)",
+  "section": null,
+  "summary": "Dead-sticked a Neko rig on hard bottom off an offshore community-hole point, plus an afternoon hump.",
+  "source_url": "https://newschannel9.com/sports/guntersville-bassmaster-kayak-series-win-worth-11500"
+ },
+ {
+  "id": "2024-kayak-2",
+  "date": "2024-05-18",
+  "event": "2024 Bassmaster Kayak Series",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "cloudy day 1",
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "buzzbait / football jig",
+  "baits": [
+   "buzzbait with paddletail",
+   "football jig with craw"
+  ],
+  "cover_structure": "bream beds near shell/hydrilla, then an offshore ditch at 5-12 ft",
+  "section": "roseberry-goose-pond",
+  "summary": "Buzzed bream beds around Goose Pond on day 1, then dragged a football jig through hydrilla on an offshore ditch.",
+  "source_url": "https://newschannel9.com/sports/guntersville-bassmaster-kayak-series-win-worth-11500"
+ },
+ {
+  "id": "2024-kayak-3",
+  "date": "2024-05-18",
+  "event": "2024 Bassmaster Kayak Series",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "cloudy day 1",
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn",
+  "technique": "bladed jig / wakebait",
+  "baits": [
+   "bladed jig",
+   "wakebait"
+  ],
+  "cover_structure": null,
+  "section": null,
+  "summary": "Fished a bladed jig and wakebait in an area found in practice.",
+  "source_url": "https://newschannel9.com/sports/guntersville-bassmaster-kayak-series-win-worth-11500"
+ },
+ {
+  "id": "2025-abt-1",
+  "date": "2025-03-16",
+  "event": "2025 Alabama Bass Trail North Division",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "severe storms the two days before",
+   "wind": "shifted during the day",
+   "water_color": "stained to muddy",
+   "level_trend": "rising",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "vibrating jig rip-and-fall",
+  "baits": [
+   "ChatterBait JackHammer with swimbait trailer",
+   "red lipless"
+  ],
+  "cover_structure": "shallow grass, then mud",
+  "section": "town-creek",
+  "summary": "Ripped a vibrating jig off the bank and let it fall back into grass near the State Park, moving into mud when the wind shifted.",
+  "source_url": "https://fishingnorthalabama.com/?p=6964"
+ },
+ {
+  "id": "2025-abt-2",
+  "date": "2025-03-16",
+  "event": "2025 Alabama Bass Trail North Division",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "severe storms the two days before",
+   "wind": "shifted during the day",
+   "water_color": "stained to muddy",
+   "level_trend": "rising",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "lipless / vibrating jig",
+  "baits": [
+   "red lipless",
+   "vibrating jig"
+  ],
+  "cover_structure": "shallow grass within a 400-yard stretch",
+  "section": null,
+  "summary": "Stayed on one short shallow grass stretch downriver with a red lipless and vibrating jig in wind-muddied water.",
+  "source_url": "https://fishingnorthalabama.com/?p=6964"
+ },
+ {
+  "id": "2025-abt-3",
+  "date": "2025-03-16",
+  "event": "2025 Alabama Bass Trail North Division",
+  "finish": 3,
+  "water_temp_f": 59,
+  "conditions": {
+   "sky": "severe storms the two days before",
+   "wind": "shifted during the day",
+   "water_color": "stained to muddy",
+   "level_trend": "rising",
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "pre-spawn",
+  "technique": "shallow rotation",
+  "baits": [],
+  "cover_structure": "very shallow water pushed up by rising lake",
+  "section": null,
+  "summary": "Rotated four practice spots as rising water pushed fish into less than a foot.",
+  "source_url": "https://fishingnorthalabama.com/?p=6964"
+ },
+ {
+  "id": "2025-redcrest-1",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "swimbait in tailrace current",
+  "baits": [
+   "Freeloader on 1/2 oz head (gizzard shad)",
+   "Mooch Minnow on 3/16 oz"
+  ],
+  "cover_structure": "dam wall in current",
+  "section": null,
+  "summary": "Ran 70 miles up to the Nickajack Dam tailrace and fished swimbaits along a wall in heavy current.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-redcrest-2",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "fluke / vibrating jig",
+  "baits": [
+   "5 in winged fluke",
+   "3/8 oz ChatterBait",
+   "swim jig",
+   "wacky worm"
+  ],
+  "cover_structure": "boulder banks (smallmouth) and shallow grass",
+  "section": null,
+  "summary": "Caught smallmouth on boulder banks near Nickajack and largemouth in shallow grass.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-redcrest-3",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "vibrating jig / creature bait",
+  "baits": [
+   "vibrating jigs (green pumpkin)",
+   "Baby Brush Hog",
+   "wacky Senko"
+  ],
+  "cover_structure": "hard spots, notches and pockets with beds",
+  "section": null,
+  "summary": "Fished vibrating jigs and slow plastics around hard spots and visible beds.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-redcrest-4",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 4,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "bed fishing",
+  "baits": [
+   "Neko-rigged Trick Worm",
+   "Speed Worm",
+   "white Z-Craw Jr"
+  ],
+  "cover_structure": "beds in coves at 4-10 ft",
+  "section": null,
+  "summary": "Sight-fished and sonar-fished beds in coves around the city of Guntersville.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-redcrest-5",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 5,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "sight fishing / vibrating jig",
+  "baits": [
+   "minnow bait",
+   "3/8 oz vibrating jig"
+  ],
+  "cover_structure": "spawning holes in grass topped near the surface",
+  "section": "mud-creek",
+  "summary": "Sight-fished light spots in grass from Mud Creek to Goose Pond and Browns to Siebold.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-redcrest-6",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 6,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "power fishing grass",
+  "baits": [
+   "Log Father creature bait",
+   "swim jig",
+   "topwater"
+  ],
+  "cover_structure": "grass and white holes mid-lake",
+  "section": null,
+  "summary": "Power-fished shallow grass mid-lake, moving to cleaner water after rain muddied it.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-redcrest-7",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 7,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "bed fishing / jerkbait",
+  "baits": [
+   "6 in Roboworm drop shot",
+   "wacky Senko",
+   "ChatterBait",
+   "jerkbaits"
+  ],
+  "cover_structure": "light spots on beds; 4-5 ft grass for prespawn",
+  "section": null,
+  "summary": "Sight-fished beds and caught staging fish in shallow grass.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-redcrest-8",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 8,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "wacky / drop shot in grass",
+  "baits": [
+   "wacky worm",
+   "finesse drop shot"
+  ],
+  "cover_structure": "shallow grass",
+  "section": null,
+  "summary": "Wacky-rigged and drop-shotted spawning bass in shallow grass.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-redcrest-9",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 9,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "jig / creature / vibrating jig",
+  "baits": [
+   "3/8 oz green pumpkin jig",
+   "creature bait",
+   "ChatterBait"
+  ],
+  "cover_structure": "calm, clear protected pockets mid-lake",
+  "section": null,
+  "summary": "Fished clear, wind-protected pockets mid-lake.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-redcrest-10",
+  "date": "2025-04-02",
+  "event": "2025 Bass Pro Shops REDCREST",
+  "finish": 10,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": "heavy rain on the final day",
+   "wind": "windy at times",
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "spawn",
+  "technique": "wacky / Neko in vegetation",
+  "baits": [
+   "The General wacky/Neko",
+   "Hit Worm drop shot",
+   "buzzbait"
+  ],
+  "cover_structure": "vegetation and white spots near beds",
+  "section": null,
+  "summary": "Worked finesse worms around beds in vegetation.",
+  "source_url": "https://majorleaguefishing.com/?p=2232695"
+ },
+ {
+  "id": "2025-toyota-central-1",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "deep crankbait offshore",
+  "baits": [
+   "Strike King 10XD",
+   "structure jig",
+   "jighead minnow"
+  ],
+  "cover_structure": "isolated offshore spot",
+  "section": null,
+  "summary": "Cranked an isolated offshore spot away from the crowd.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2025-toyota-central-2",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 2,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "minnow / football jig",
+  "baits": [
+   "jighead minnow",
+   "3/4 oz football jig"
+  ],
+  "cover_structure": "deeper schools, then 10 ft shell beds by grass",
+  "section": null,
+  "summary": "Fished minnows to deeper schools, then a football jig on shell near grass mid-lake.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2025-toyota-central-3",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 3,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "minnow / drop shot",
+  "baits": [
+   "jighead minnow",
+   "6 in Roboworm drop shot"
+  ],
+  "cover_structure": "offshore schools",
+  "section": null,
+  "summary": "Fished offshore schools at dawn, positioning down-current when wind opposed it.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2025-toyota-central-4",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 4,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "drop shot",
+  "baits": [
+   "6 in Roboworm on 3/16 oz"
+  ],
+  "cover_structure": "offshore",
+  "section": null,
+  "summary": "Drop-shotted offshore spots.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2025-toyota-central-5",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 5,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "mixed offshore",
+  "baits": [
+   "10XD",
+   "hair jig",
+   "football jig",
+   "swimbait"
+  ],
+  "cover_structure": "shell bars and current breaks",
+  "section": null,
+  "summary": "Rotated baits for pressured, suspended fish on shell bars and current breaks.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2025-toyota-central-6",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 6,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "Neko / frog",
+  "baits": [
+   "Neko-rigged Hit Worm",
+   "Swamp Lord frog",
+   "Dime 15"
+  ],
+  "cover_structure": "hard spot on a grass edge at 8 ft, bluegill beds, mats",
+  "section": "main-river-ledges",
+  "summary": "Neko-rigged a hard spot near the dam, then frogged mats and blown-in eelgrass.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2025-toyota-central-7",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 7,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "mixed offshore",
+  "baits": [
+   "Z Boss 24",
+   "Ridge Worm",
+   "7 in Sakamata Shad",
+   "ChatterBait"
+  ],
+  "cover_structure": "10 ft hard spot, then a wind-muddied flat",
+  "section": null,
+  "summary": "Hit a schooled hard spot on day 1 before wind muddied the adjoining flat.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2025-toyota-central-8",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 8,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "ledge swimbait / hair jig",
+  "baits": [
+   "8 in swimbait",
+   "hair jig",
+   "drop shot"
+  ],
+  "cover_structure": "ledges and current-facing points",
+  "section": null,
+  "summary": "Fished ledge points facing the current, timing spots to when water moved.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2025-toyota-central-9",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 9,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "crankbait / swimbait",
+  "baits": [
+   "Rapala DT14",
+   "swimbait"
+  ],
+  "cover_structure": "unpressured offshore spots",
+  "section": null,
+  "summary": "Cranked and swam offshore spots others weren't fishing.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2025-toyota-central-10",
+  "date": "2025-05-14",
+  "event": "2025 Toyota Series Central Division",
+  "finish": 10,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": null,
+   "water_color": null,
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "post-spawn / shad spawn",
+  "technique": "swimbait / jig",
+  "baits": [
+   "Shaky Fish with Jerky J",
+   "Spunk Shad",
+   "swimbait"
+  ],
+  "cover_structure": "community holes and untouched spots",
+  "section": null,
+  "summary": "Fished swimbaits and jigs on offshore community holes.",
+  "source_url": "https://www.sail-world.com/news/286291/Top-10-baits-from-Lake-Guntersville"
+ },
+ {
+  "id": "2026-bpt-1",
+  "date": "2026-01-15",
+  "event": "2026 Bass Pro Tour opener",
+  "finish": 1,
+  "water_temp_f": null,
+  "conditions": {
+   "sky": null,
+   "wind": "westerly day 2",
+   "water_color": "stained, clouding again day 4",
+   "level_trend": null,
+   "front": null,
+   "backfilled": false
+  },
+  "season_phase": "winter",
+  "technique": "crankbait + jighead minnow",
+  "baits": [
+   "2.5 in shallow crankbait (orange craw)",
+   "4.25 in minnow on 3/16 oz",
+   "jerkbait"
+  ],
+  "cover_structure": "hydrilla, bars and a causeway shoreline; bass under bait at 10-14 ft",
+  "section": null,
+  "summary": "Fished a jighead minnow to bass under bait near a bridge, then won by switching from a jerkbait to an orange crawfish crankbait through hydrilla when the water dirtied.",
+  "source_url": "https://www.in-fisherman.com/editorial/winning-pattern-how-gill-mastered-guntersville/544295"
+ }
+]
