@@ -46,8 +46,9 @@ label { display: block; font-size: 13px; color: var(--muted); margin: 10px 0 4px
 /* Bottom sheet */
 .sheet { position: fixed; left: 0; right: 0; bottom: calc(var(--tabs-h) + env(safe-area-inset-bottom)); max-height: 70vh; z-index: 1050;
   background: var(--surface); border-top-left-radius: 18px; border-top-right-radius: 18px; border-top: 1px solid var(--line);
-  transform: translateY(110%); transition: transform .25s ease; overflow-y: auto; box-shadow: 0 -10px 30px rgba(0,0,0,.45); }
-.sheet.open { transform: translateY(0); }
+  transform: translateY(110%); transition: transform .25s ease, visibility 0s linear .25s; overflow-y: auto; box-shadow: 0 -10px 30px rgba(0,0,0,.45);
+  visibility: hidden; pointer-events: none; }
+.sheet.open { transform: translateY(0); visibility: visible; pointer-events: auto; transition: transform .25s ease; }
 .sheet-grip { display: block; width: 100%; height: 22px; background: none; border: 0; position: sticky; top: 0; }
 .sheet-grip::before { content: ""; display: block; width: 44px; height: 5px; border-radius: 3px; background: var(--line); margin: 8px auto; }
 .sheet-body { padding: 0 16px 18px; }

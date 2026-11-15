@@ -13,6 +13,8 @@ function updateBanner() {
     .filter((x) => x.s.stale);
   banner.hidden = !stale.length;
   banner.textContent = stale.map((x) => `${x.label} data last updated ${x.s.label}`).join(' · ');
+  // Push content below the banner so it never covers titles.
+  requestAnimationFrame(() => { view.style.top = banner.hidden ? '' : `${banner.offsetHeight + 12}px`; });
 }
 
 export async function showTab(name) {
