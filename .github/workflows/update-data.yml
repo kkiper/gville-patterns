@@ -53,6 +53,8 @@ jobs:
         env:
           TOKEN: ${{ github.token }}
         run: |
-          curl -s -o /dev/null -w "Pages build request: %{http_code}\n" -X POST \
-            -H "Authorization: Bearer ${TOKEN}" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds"
+          H=(-H "Authorization: Bearer ${TOKEN}" -H "Accept: application/vnd.github+json")
+          API="https://api.github.com/repos/${GITHUB_REPOSITORY}/pages"
+          echo "== Pages settings"; curl -s "${H[@]}" "$API" | head -c 1500; echo
+          echo "== Latest Pages build"; curl -s "${H[@]}" "$API/builds/latest" | head -c 1500; echo
+          echo "== Requesting a build"; curl -s "${H[@]}" -X POST "$API/builds" | head -c 600; echo
