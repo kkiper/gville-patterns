@@ -18,3 +18,12 @@ test('labels', () => {
   assert.equal(staleness(ago(2 * H + 5 * M), t).label, '2 h ago');
   assert.equal(staleness(ago(50 * H), t).label, '2 days ago');
 });
+
+import { dataBase } from '../js/data.js';
+test('dataBase reads straight from the GitHub repo on github.io', () => {
+  assert.equal(dataBase({ hostname: 'kkiper.github.io', pathname: '/gville-patterns/' }), 'https://raw.githubusercontent.com/kkiper/gville-patterns/main/');
+  assert.equal(dataBase({ hostname: 'kkiper.github.io', pathname: '/gville-patterns/index.html' }), 'https://raw.githubusercontent.com/kkiper/gville-patterns/main/');
+});
+test('dataBase stays local elsewhere', () => {
+  assert.equal(dataBase({ hostname: 'localhost', pathname: '/' }), '');
+});

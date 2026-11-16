@@ -7,8 +7,8 @@ import { chicagoToDate } from '../lib/time.js';
 import * as sheet from './sheet.js';
 import { esc, dash, compass, fmtTime, baitSummary, currentWaterTemp, currentHourIndex } from './common.js';
 
-const LAYERS = { sections: 'Sections', heat: 'Best Areas', wind: 'Wind' };
-const on = { sections: true, heat: true, wind: false };
+const LAYERS = { sections: 'Sections', heat: 'Best Areas', wind: 'Wind', satellite: 'Satellite' };
+const on = { sections: true, heat: true, wind: false, satellite: false };
 const EXPOSURE_COLOR = { windblown: '#ff6b6b', partial: '#ffb547', calm: null };
 
 export async function render(root, ctx) {
@@ -23,11 +23,15 @@ export async function render(root, ctx) {
     root.querySelector('#map').innerHTML = '<div class="page"><p class="muted">The map library didn\'t load. Connect to the internet once so it can be saved for offline use.</p></div>';
     return;
   }
-  const map = L.map('map', { zoomControl: false, attributionControl: true }).setView([34.40, -86.27], 11);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 18, subdomains: 'abcd',
-    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-  }).addTo(map);
+  const map = L.map('map', { zoomControl: false, attributionControl: true }).setView([34.40, -86.27], 12);
+  const ESRI = 'https://server.arcgisonline.com/ArcGIS/rest/services/';
+  const bases = {
+    dark: L.tileLayer(`${ESRI}Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}`, { maxZoom: 16, attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors' }),
+    satellite: L.tileLayer(`${ESRI}World_Imagery/MapServer/tile/{z}/{y}/{x}`, { maxZoom: 18, attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics' }),
+  };
+  bases[on.satellite ? 'satellite' : 'dark'].addTo(map);
+  const LABEL_ZOOM = 12;
+  map.on('zoomend', () => draw());
 
   const hours = weather?.hours || [];
   let hourIdx = currentHourIndex(hours, ctx.now);
@@ -56,7 +60,7 @@ export async function render(root, ctx) {
         fillColor: '#3ddc97',
         fillOpacity: on.heat ? [0.03, 0.12, 0.22, 0.32, 0.42, 0.55][level] : 0.02,
       }).addTo(group);
-      if (on.sections) circle.bindTooltip(esc(s.name), { permanent: true, direction: 'center', className: 'section-label' });
+      if (on.sections && map.getZoom() >= LABEL_ZOOM) circle.bindTooltip(esc(s.name), { permanent: true, direction: 'center', className: 'section-label' });
       circle.on('click', () => openSection(s));
     }
   }
@@ -98,6 +102,10 @@ export async function render(root, ctx) {
   root.querySelectorAll('.layer-picker button').forEach((b) => b.addEventListener('click', () => {
     on[b.dataset.layer] = !on[b.dataset.layer];
     b.classList.toggle('on', on[b.dataset.layer]);
+    if (b.dataset.layer === 'satellite') {
+      map.removeLayer(bases[on.satellite ? 'dark' : 'satellite']);
+      bases[on.satellite ? 'satellite' : 'dark'].addTo(map);
+    }
     sliderBox.hidden = !on.wind;
     draw();
   }));

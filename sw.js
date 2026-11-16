@@ -1,7 +1,7 @@
 // Offline support: app shell precache, network-first data, cache-first lake tiles.
-const SHELL = 'gville-shell-v2';
+const SHELL = 'gville-shell-v3';
 const DATA = 'gville-data-v1';
-const TILES = 'gville-tiles-v1';
+const TILES = 'gville-tiles-v2';
 const MAX_TILES = 2000;
 const SHELL_FILES = [
   './', 'index.html', 'css/app.css', 'manifest.webmanifest', 'icons/icon-192.png',
@@ -20,9 +20,10 @@ self.addEventListener('install', (e) => {
 self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));
 
 function tileInLake(url) {
-  const m = /\/(\d+)\/(\d+)\/(\d+)(@2x)?\.png/.exec(url.pathname);
+  // Esri tile URLs end in /tile/{z}/{y}/{x}
+  const m = /\/tile\/(\d+)\/(\d+)\/(\d+)$/.exec(url.pathname);
   if (!m) return false;
-  const [z, x, y] = [+m[1], +m[2], +m[3]];
+  const [z, y, x] = [+m[1], +m[2], +m[3]];
   const n = 2 ** z;
   const lng = (x / n) * 360 - 180;
   const lat = (Math.atan(Math.sinh(Math.PI * (1 - (2 * y) / n))) * 180) / Math.PI;
@@ -48,7 +49,7 @@ self.addEventListener('fetch', (e) => {
     }).catch(() => caches.match(e.request)));
     return;
   }
-  if (url.hostname.includes('basemaps.cartocdn.com')) {
+  if (url.hostname === 'server.arcgisonline.com') {
     if (!tileInLake(url)) return;
     e.respondWith(caches.open(TILES).then(async (c) => {
       const hit = await c.match(e.request);

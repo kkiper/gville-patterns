@@ -85,7 +85,7 @@ function openForm(ctx, done, last) {
     const box = body.querySelector('#pick');
     box.style.display = 'block';
     m = L.map(box, { zoomControl: false }).setView([34.40, -86.27], 10);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains: 'abcd', maxZoom: 18 }).addTo(m);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 18, attribution: 'Tiles &copy; Esri' }).addTo(m);
     m.on('click', (e) => setLoc([e.latlng.lat, e.latlng.lng], 'picked on map'));
     setTimeout(() => m.invalidateSize(), 300);
   }
