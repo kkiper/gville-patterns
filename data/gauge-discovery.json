@@ -1,0 +1,139 @@
+{
+ "at": "2026-11-16T01:41:43.137Z",
+ "nwps": [
+  {
+   "lid": "BGWA1",
+   "name": "Big Wills Creek (AL) near Fort Payne",
+   "lat": 34.438055555556,
+   "lng": -85.767222222222
+  },
+  {
+   "lid": "BLPA1",
+   "name": "Little River near BLUE POND",
+   "lat": 34.28888888888889,
+   "lng": -85.68055555555556
+  },
+  {
+   "lid": "BSBA1",
+   "name": "Flint River (AL) at Brownsboro",
+   "lat": 34.749166666667,
+   "lng": -86.446666666667
+  },
+  {
+   "lid": "CNTA1",
+   "name": "Pinhook Creek (AL) at Clinton Avenue in Huntsville",
+   "lat": 34.730277777778,
+   "lng": -86.593333333333
+  },
+  {
+   "lid": "FRYA1",
+   "name": "Aldridge Creek (AL) near Farley",
+   "lat": 34.623888888889,
+   "lng": -86.541111111111
+  },
+  {
+   "lid": "GVDA1",
+   "name": "Tennessee River below Guntersville Dam",
+   "lat": 34.421388888889,
+   "lng": -86.393888888889
+  },
+  {
+   "lid": "GVHA1",
+   "name": "Tennessee River above Guntersville Dam Headwater/Pool Elevation",
+   "lat": 34.4217,
+   "lng": -86.3927
+  },
+  {
+   "lid": "NKJT1",
+   "name": "Tennessee River above Nickajack Dam (Jasper 5S)",
+   "lat": 34.999167,
+   "lng": -85.619167
+  },
+  {
+   "lid": "SCRA1",
+   "name": "Tennessee River near Scottsboro",
+   "lat": 34.643611111111,
+   "lng": -85.980277777778
+  },
+  {
+   "lid": "SHEA1",
+   "name": "Aldridge Creek (AL) at Sherwood Drive in Huntsville",
+   "lat": 34.664166666667,
+   "lng": -86.554166666667
+  },
+  {
+   "lid": "TONA1",
+   "name": "Aldridge Creek (AL) at Toney Drive in Huntsville",
+   "lat": 34.698055555556,
+   "lng": -86.550555555556
+  },
+  {
+   "lid": "WDVA1",
+   "name": "Paint Rock River (AL) near Woodville",
+   "lat": 34.624166666667,
+   "lng": -86.306388888889
+  },
+  {
+   "lid": "WHIA1",
+   "name": "Tennessee River at Whitesburg",
+   "lat": 34.571666666667,
+   "lng": -86.558055555556
+  }
+ ],
+ "tailwater": {
+  "GVDA1": {
+   "name": "Tennessee River below Guntersville Dam",
+   "primary": "Tailwater ft",
+   "secondary": "Flow kcfs",
+   "last": [
+    {
+     "validTime": "2026-11-15T23:00:00Z",
+     "generatedTime": "2026-11-15T23:24:05Z",
+     "primary": 15.41,
+     "secondary": -999
+    },
+    {
+     "validTime": "2026-11-16T00:00:00Z",
+     "generatedTime": "2026-11-16T00:24:05Z",
+     "primary": 15.44,
+     "secondary": -999
+    },
+    {
+     "validTime": "2026-11-16T01:00:00Z",
+     "generatedTime": "2026-11-16T01:24:05Z",
+     "primary": 15.45,
+     "secondary": -999
+    }
+   ],
+   "forecastPoints": 0
+  },
+  "GVHA1": {
+   "name": "Tennessee River above Guntersville Dam Headwater/Pool Elevation",
+   "primary": "Pool ft",
+   "secondary": "Flow kcfs",
+   "last": [
+    {
+     "validTime": "2026-11-15T23:00:00Z",
+     "generatedTime": "2026-11-15T23:24:05Z",
+     "primary": 594.1,
+     "secondary": -999
+    },
+    {
+     "validTime": "2026-11-16T00:00:00Z",
+     "generatedTime": "2026-11-16T00:24:06Z",
+     "primary": 594.07,
+     "secondary": -999
+    },
+    {
+     "validTime": "2026-11-16T01:00:00Z",
+     "generatedTime": "2026-11-16T01:24:05Z",
+     "primary": 594.07,
+     "secondary": -999
+    }
+   ],
+   "forecastPoints": 0
+  }
+ },
+ "usgsTemp": [],
+ "errors": []
+}
