@@ -1,5 +1,5 @@
 // Offline support: app shell precache, network-first data, cache-first lake tiles.
-const SHELL = 'gville-shell-v3';
+const SHELL = 'gville-shell-v4';
 const DATA = 'gville-data-v1';
 const TILES = 'gville-tiles-v2';
 const MAX_TILES = 2000;

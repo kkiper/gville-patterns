@@ -1,5 +1,5 @@
 // App shell: tab routing, data loading, stale-data banner, service worker.
-import { loadAll, staleness } from './data.js';
+import { loadAll, staleness, refreshLive } from './data.js';
 
 const view = document.getElementById('view');
 const banner = document.getElementById('banner');
@@ -38,8 +38,12 @@ async function boot() {
   ctx.now = new Date();
   updateBanner();
   showTab(current);
+  // Top up stale data directly from the sources, then redraw.
+  await refreshLive(ctx.data, ctx.now);
+  updateBanner();
+  showTab(current);
 }
 
 boot();
-setInterval(async () => { ctx.data = await loadAll(); ctx.now = new Date(); updateBanner(); }, 15 * 60000);
+setInterval(async () => { ctx.now = new Date(); ctx.data = await refreshLive(await loadAll(), ctx.now); updateBanner(); }, 15 * 60000);
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
