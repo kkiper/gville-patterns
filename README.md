@@ -1,4 +1,4 @@
-# G-Ville Patterns
+# G-Ville Patterns 
 
 A personal Lake Guntersville fishing app that you install on your phone. It shows:
 
