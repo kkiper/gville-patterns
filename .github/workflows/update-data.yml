@@ -16,25 +16,35 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
+      - name: Get the code
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          git clone --depth 1 "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+      - name: Node version
+        run: node --version
       - name: Tests
+        working-directory: repo
         run: npm test
       - name: Lake outline (first run only)
+        working-directory: repo
         run: node scripts/fetch-outline.mjs
       - name: Fetch distances
+        working-directory: repo
         run: node scripts/build-fetch.mjs
       - name: Weather
+        working-directory: repo
         run: node scripts/fetch-weather.mjs
       - name: Water
+        working-directory: repo
         run: node scripts/fetch-water.mjs
       - name: Validate patterns
+        working-directory: repo
         run: node scripts/validate-patterns.mjs
       - name: Commit data
+        working-directory: repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet || (git commit -m "data: hourly update" && git push)
+          git diff --cached --quiet || (git commit -m "data: hourly update" && git pull --rebase && git push)

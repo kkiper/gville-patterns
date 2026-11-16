@@ -10,15 +10,21 @@ jobs:
   discover:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
+      - name: Get the code
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          git clone --depth 1 "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+      - name: Node version
+        run: node --version
       - name: Install headless Chrome
+        working-directory: repo
         run: npm install --no-save playwright@1 && npx playwright install --with-deps chromium
       - name: Record TVA page data requests
+        working-directory: repo
         run: node tools/discover-tva.mjs
       - name: Commit findings
+        working-directory: repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
