@@ -1,5 +1,6 @@
 // Water: generation, pool elevation (with operating band), Scottsboro stage, discharge, water temp.
 import { esc, fmtTime } from './common.js';
+import { releaseTrend } from '../lib/water.js';
 
 function sparkline(observed, forecast, band) {
   const pts = [...observed.map((p) => ({ ...p, f: false })), ...forecast.map((p) => ({ ...p, f: true }))];
@@ -24,7 +25,8 @@ const unavailable = (what) => `<p class="muted small">${what} isn't available ri
 
 export function render(root, ctx) {
   const w = ctx.data.water;
-  const pool = w?.pool, sb = w?.scottsboro, usgs = w?.usgs;
+  const pool = w?.pool, sb = w?.scottsboro, tw = w?.tailwater;
+  const rel = releaseTrend(tw?.observed);
   const band = w?.operatingBand;
   const month = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', month: 'numeric' }).format(ctx.now));
   const summer = month >= 6 && month <= 9;
@@ -32,10 +34,12 @@ export function render(root, ctx) {
   const p = latest(pool?.observed);
 
   root.innerHTML = `<div class="page"><h1>Water</h1>
-    <div class="card"><h3>Generation</h3>
-      ${w?.generation ? w.generation.schedule.map((g) => `<div class="small">${esc(g.date)}: ${esc(g.hours)}</div>`).join('') + `<p class="source">${esc(w.generation.source)}</p>`
-        : `<p class="small">TVA's generation schedule isn't available in the app yet. When the dams generate, current moves through the main river and ledges turn on.</p>
-           <p class="small"><a href="https://www.tva.com/environment/lake-levels/guntersville" target="_blank" rel="noopener">Guntersville on TVA Lake Levels</a> · <a href="https://www.tva.com/environment/lake-levels/tva-lake-info-app" target="_blank" rel="noopener">TVA Lake Info app</a></p>`}
+    <div class="card"><div class="row between"><h3>Dam releases</h3>
+      <span class="pill ${rel?.trend === 'rising' ? 'accent' : ''}">${rel ? { rising: '↗ Increasing', falling: '↘ Dropping', steady: '→ Steady' }[rel.trend] : '—'}</span></div>
+      ${rel ? `<p class="small">Tailwater below the dam ${rel.trend === 'steady' ? 'is holding steady' : `${rel.trend === 'rising' ? 'rose' : 'fell'} ${Math.abs(rel.changeFt).toFixed(2)} ft`} over the last 3 hours (now ${rel.latest.value.toFixed(2)} ft). ${rel.trend === 'rising' ? 'TVA is releasing more water: expect current on the main river and ledges.' : rel.trend === 'falling' ? 'Releases are tapering off: current is slowing.' : ''}</p>` : '<p class="small muted">Tailwater reading unavailable right now.</p>'}
+      ${tw ? sparkline(tw.observed.slice(-48), [], null) : ''}
+      <p class="source">NOAA gauge GVDA1, below Guntersville Dam${rel ? ` · ${fmtTime(rel.latest.time, { weekday: 'short', hour: 'numeric', minute: '2-digit' })}` : ''}<br>
+      Exact schedule: <a href="https://www.tva.com/environment/lake-levels/guntersville" target="_blank" rel="noopener">TVA Lake Levels</a> · <a href="https://www.tva.com/environment/lake-levels/tva-lake-info-app" target="_blank" rel="noopener">TVA Lake Info app</a></p>
     </div>
     <div class="card"><div class="row between"><h3>Pool elevation</h3><span class="big">${p ? p.value.toFixed(2) : '—'}<span class="muted small"> ft</span></span></div>
       ${pool ? sparkline(pool.observed.slice(-48), pool.forecast, bandNow) : unavailable('Pool elevation')}
@@ -44,11 +48,8 @@ export function render(root, ctx) {
     <div class="card"><div class="row between"><h3>Scottsboro</h3><span class="big">${latest(sb?.observed) ? latest(sb.observed).value.toFixed(2) : '—'}<span class="muted small"> ${esc(sb?.units || 'ft')}</span></span></div>
       ${sb ? sparkline(sb.observed.slice(-48), sb.forecast, null) : unavailable('The Scottsboro reading')}
       <p class="source">NOAA gauge SCRA1${latest(sb?.observed) ? ` · ${fmtTime(latest(sb.observed).time, { weekday: 'short', hour: 'numeric', minute: '2-digit' })}` : ''}</p></div>
-    <div class="card"><div class="row between"><h3>River discharge</h3><span class="big">${usgs?.dischargeCfs ? Math.round(usgs.dischargeCfs.value).toLocaleString() : '—'}<span class="muted small"> cfs</span></span></div>
-      <p class="source">USGS 03573500, Tennessee River at Guntersville${usgs?.dischargeCfs ? ` · ${fmtTime(usgs.dischargeCfs.time, { weekday: 'short', hour: 'numeric', minute: '2-digit' })}` : ''}</p></div>
-    <div class="card"><div class="row between"><h3>Water temp</h3><span class="big">${usgs?.waterTempF ? usgs.waterTempF.value + '°' : '—'}</span></div>
-      ${usgs?.waterTempF ? `<p class="source">USGS 03573500 · ${fmtTime(usgs.waterTempF.time, { weekday: 'short', hour: 'numeric', minute: '2-digit' })}</p>`
-        : '<p class="small muted">No live reading on Guntersville. Log yours from the boat in the Log tab notes.</p>'}</div>
+    <div class="card"><div class="row between"><h3>Water temp</h3><span class="big">—</span></div>
+      <p class="small muted">No gauge on Guntersville reports live water temperature. Log yours from the boat in the Log tab notes.</p></div>
     ${w?.carried?.length ? `<p class="small" style="color:var(--warn)">Couldn't refresh ${w.carried.map(esc).join(', ')} this hour; showing the last good reading (see its time).</p>` : ''}
     ${w?.sourceErrors?.length ? `<p class="small muted">Last update missed: ${w.sourceErrors.map(esc).join('; ')}</p>` : ''}
     ${!w ? '<p class="muted">Water data appears after the hourly data update runs.</p>' : ''}
