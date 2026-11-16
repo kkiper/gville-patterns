@@ -4,6 +4,7 @@ import { likeToday, sectionCounts, filterPatterns, heatLevels } from '../lib/pat
 import { haversineMiles } from '../lib/geo.js';
 import { loadCatches } from '../store.js';
 import { chicagoToDate } from '../lib/time.js';
+import { createWindStreaks } from './wind-streaks.js';
 import * as sheet from './sheet.js';
 import { esc, dash, compass, fmtTime, baitSummary, currentWaterTemp, currentHourIndex } from './common.js';
 
@@ -39,6 +40,14 @@ export async function render(root, ctx) {
   const heat = heatLevels(sectionCounts(matches));
   const catches = await loadCatches().catch(() => []);
   const group = L.layerGroup().addTo(map);
+  const streaks = ctx.data.lakeMask ? createWindStreaks(map, ctx.data.lakeMask) : null;
+  function updateStreaks() {
+    if (!streaks) return;
+    if (!on.wind) return streaks.hide();
+    const h = hours[hourIdx];
+    streaks.setWind(h?.windFromDeg ?? null, h?.windMph ?? null);
+    streaks.show();
+  }
   root.querySelector('#heat-note').textContent = heat.levels && Object.keys(heat.levels).length
     ? `Best Areas: ${heat.total} of ${matches.length} matching patterns name a section`
     : `Best Areas: too few patterns this time of year name a section (${heat.total})`;
@@ -97,7 +106,7 @@ export async function render(root, ctx) {
     root.querySelector('#slider-label').textContent = h ? fmtTime(chicagoLocal(h.time), { weekday: 'short', hour: 'numeric' }) : 'No forecast';
     root.querySelector('#slider-wind').textContent = h ? `${dash(h.windMph, ' mph')} ${compass(h.windFromDeg)}` : '';
   }
-  slider.addEventListener('input', () => { hourIdx = +slider.value; updateSlider(); draw(); });
+  slider.addEventListener('input', () => { hourIdx = +slider.value; updateSlider(); draw(); updateStreaks(); });
 
   root.querySelectorAll('.layer-picker button').forEach((b) => b.addEventListener('click', () => {
     on[b.dataset.layer] = !on[b.dataset.layer];
@@ -108,11 +117,12 @@ export async function render(root, ctx) {
     }
     sliderBox.hidden = !on.wind;
     draw();
+    updateStreaks();
   }));
   sliderBox.hidden = !on.wind;
   updateSlider();
   draw();
-  setTimeout(() => map.invalidateSize(), 50);
+  setTimeout(() => { map.invalidateSize(); updateStreaks(); }, 50);
 }
 
 // Forecast hour strings are Chicago-local; turn them into a Date for display.

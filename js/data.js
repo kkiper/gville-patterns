@@ -39,6 +39,7 @@ const FILES = {
   water: 'data/water.json',
   sections: 'data/sections.json',
   sectionFetch: 'data/section-fetch.json',
+  lakeMask: 'data/lake-mask.geojson',
   patterns: 'data/patterns.json',
 };
 

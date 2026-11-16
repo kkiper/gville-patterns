@@ -2,7 +2,7 @@
 
 A personal Lake Guntersville fishing app that you install on your phone. It shows:
 
-- **Map:** 14 named lake sections, a "Best Areas" layer shaded by how often each section shows up in tournament patterns for this time of year, and a wind layer that marks which sections are windblown, partly exposed or calm, hour by hour.
+- **Map:** 14 named lake sections, a "Best Areas" layer shaded by how often each section shows up in tournament patterns for this time of year, and a wind layer with animated streaks that flow the way the wind blows (faster and denser in stronger wind), plus which sections are windblown, partly exposed or calm, hour by hour.
 - **Forecast:** 7 days with a simple bite rating whose reasons are shown on screen (pressure trend, wind, moon periods).
 - **Water:** pool elevation (with TVA's operating range), the Scottsboro gauge, river discharge, and water temperature when a gauge reports it.
 - **Patterns:** 103 top-finisher patterns from 16 Guntersville tournaments (2014–2026), filterable by month, water temperature, technique, section and water color. Each one is a short summary that links to its source article.
