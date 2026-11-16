@@ -33,3 +33,13 @@ test('malformed input → empty, no throw', () => {
   assert.deepEqual(normalizeNwps(null), { observed: [], forecast: [], units: null });
   assert.deepEqual(normalizeUsgs({ nope: 1 }), { waterTempF: null, dischargeCfs: null });
 });
+
+import { releaseTrend } from '../js/lib/water.js';
+const obs = (vals) => vals.map((value, i) => ({ time: `2026-11-16T0${i}:00:00Z`, value }));
+test('releaseTrend: rising tailwater means releases increasing', () => {
+  assert.equal(releaseTrend(obs([15.4, 15.5, 15.9, 16.3])).trend, 'rising');
+});
+test('releaseTrend: falling', () => assert.equal(releaseTrend(obs([17.0, 16.8, 16.4, 16.1])).trend, 'falling'));
+test('releaseTrend: steady within 0.3 ft over 3 h', () => assert.equal(releaseTrend(obs([15.4, 15.45, 15.5, 15.5])).trend, 'steady'));
+test('releaseTrend: too little data → null', () => assert.equal(releaseTrend(obs([15.4])), null));
+test('releaseTrend reports change in feet', () => assert.equal(releaseTrend(obs([15.4, 15.5, 15.9, 16.3])).changeFt, 0.9));

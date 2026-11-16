@@ -34,3 +34,17 @@ export function normalizeUsgs(json) {
     dischargeCfs: latest(find('00060')),
   };
 }
+
+// Tailwater below the dam rises when TVA releases more water (more current on the lake's
+// lower end) and falls when releases drop. Compare the latest reading with ~3 hours earlier.
+const TREND_FT = 0.3;
+export function releaseTrend(observed) {
+  if (!Array.isArray(observed) || observed.length < 2) return null;
+  const last = observed[observed.length - 1];
+  const target = Date.parse(last.time) - 3 * 3600000;
+  let earlier = observed[0];
+  for (const p of observed) if (Date.parse(p.time) <= target) earlier = p;
+  const changeFt = Math.round((last.value - earlier.value) * 100) / 100;
+  const trend = changeFt >= TREND_FT ? 'rising' : changeFt <= -TREND_FT ? 'falling' : 'steady';
+  return { trend, changeFt, since: earlier.time, latest: last };
+}
