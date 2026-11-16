@@ -1,0 +1,82 @@
+:root {
+  --bg: #0f1720; --surface: #18232f; --surface-2: #213040; --line: #2c3d50;
+  --text: #e6edf3; --muted: #8fa3b8; --accent: #3ddc97; --warn: #ffb547; --bad: #ff6b6b;
+  --tabs-h: 64px; --radius: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); }
+body { overflow: hidden; -webkit-tap-highlight-color: transparent; }
+a { color: var(--accent); }
+button { font: inherit; color: inherit; }
+#view { position: absolute; inset: 0 0 calc(var(--tabs-h) + env(safe-area-inset-bottom)) 0; overflow-y: auto; }
+.page { padding: calc(env(safe-area-inset-top) + 16px) 16px 24px; max-width: 720px; margin: 0 auto; }
+h1 { font-size: 22px; margin: 4px 0 14px; letter-spacing: -0.01em; }
+h2 { font-size: 15px; margin: 18px 0 8px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+
+/* Tabs */
+.tabs { position: fixed; left: 0; right: 0; bottom: 0; height: calc(var(--tabs-h) + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom);
+  display: flex; background: rgba(15,23,32,.96); border-top: 1px solid var(--line); z-index: 1000; backdrop-filter: blur(8px); }
+.tabs button { flex: 1; background: none; border: 0; color: var(--muted); font-size: 11px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+.tabs button .ico { font-size: 20px; line-height: 1; }
+.tabs button.active { color: var(--accent); }
+
+/* Banner */
+.banner { position: fixed; top: env(safe-area-inset-top); left: 8px; right: 8px; margin-top: 8px; z-index: 1100; background: var(--warn); color: #1d1300;
+  padding: 8px 12px; border-radius: 10px; font-size: 13px; font-weight: 600; box-shadow: 0 4px 16px rgba(0,0,0,.4); }
+
+/* Cards */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; margin-bottom: 10px; }
+.card h3 { margin: 0 0 6px; font-size: 16px; }
+.row { display: flex; align-items: center; gap: 10px; }
+.between { justify-content: space-between; }
+.big { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; }
+.pill { display: inline-block; padding: 3px 9px; border-radius: 999px; background: var(--surface-2); color: var(--text); font-size: 12px; margin: 2px 4px 2px 0; }
+.pill.accent { background: rgba(61,220,151,.15); color: var(--accent); }
+.dots { letter-spacing: 2px; color: var(--accent); }
+.dots .off { color: var(--line); }
+.source { font-size: 12px; color: var(--muted); margin-top: 8px; }
+.btn { background: var(--accent); color: #062417; border: 0; border-radius: 12px; padding: 12px 16px; font-weight: 700; }
+.btn.ghost { background: var(--surface-2); color: var(--text); }
+input, select, textarea { width: 100%; background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 10px; font: inherit; }
+label { display: block; font-size: 13px; color: var(--muted); margin: 10px 0 4px; }
+
+/* Bottom sheet */
+.sheet { position: fixed; left: 0; right: 0; bottom: calc(var(--tabs-h) + env(safe-area-inset-bottom)); max-height: 70vh; z-index: 1050;
+  background: var(--surface); border-top-left-radius: 18px; border-top-right-radius: 18px; border-top: 1px solid var(--line);
+  transform: translateY(110%); transition: transform .25s ease, visibility 0s linear .25s; overflow-y: auto; box-shadow: 0 -10px 30px rgba(0,0,0,.45);
+  visibility: hidden; pointer-events: none; }
+.sheet.open { transform: translateY(0); visibility: visible; pointer-events: auto; transition: transform .25s ease; }
+.sheet-grip { display: block; width: 100%; height: 22px; background: none; border: 0; position: sticky; top: 0; }
+.sheet-grip::before { content: ""; display: block; width: 44px; height: 5px; border-radius: 3px; background: var(--line); margin: 8px auto; }
+.sheet-body { padding: 0 16px 18px; }
+
+/* Map */
+.map-wrap { position: absolute; inset: 0; }
+#map { position: absolute; inset: 0; background: #0b1118; }
+.layer-picker { position: absolute; top: calc(env(safe-area-inset-top) + 12px); right: 12px; z-index: 900; background: rgba(24,35,47,.95);
+  border: 1px solid var(--line); border-radius: 12px; padding: 6px; display: flex; flex-direction: column; gap: 4px; }
+.layer-picker button { background: none; border: 0; padding: 8px 10px; border-radius: 8px; text-align: left; color: var(--muted); font-size: 13px; }
+.layer-picker button.on { background: rgba(61,220,151,.15); color: var(--accent); }
+.time-slider { position: absolute; left: 12px; right: 12px; bottom: 12px; z-index: 900; background: rgba(24,35,47,.95); border: 1px solid var(--line);
+  border-radius: 12px; padding: 8px 12px; }
+.time-slider input { padding: 0; background: none; border: 0; accent-color: var(--accent); }
+.map-title { position: absolute; top: calc(env(safe-area-inset-top) + 12px); left: 12px; z-index: 900; background: rgba(24,35,47,.95);
+  border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; font-weight: 700; }
+.leaflet-container { font: inherit; background: #0b1118; }
+.section-label { background: none; border: 0; box-shadow: none; color: var(--text); font-size: 11px; font-weight: 600; text-shadow: 0 1px 3px #000; }
+.leaflet-tooltip.section-label::before { display: none; }
+
+/* Forecast strip */
+.strip { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scroll-snap-type: x mandatory; }
+.day { min-width: 108px; scroll-snap-align: start; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; text-align: center; }
+.day .name { font-weight: 700; }
+.arrow { display: inline-block; }
+table.hours { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.hours td, table.hours th { padding: 6px 4px; border-bottom: 1px solid var(--line); text-align: left; }
+.filters { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.filters label { margin: 0 0 4px; }
+.toggle { display: flex; align-items: center; gap: 8px; }
+.toggle input { width: auto; }

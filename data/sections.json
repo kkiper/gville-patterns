@@ -1,0 +1,16 @@
+[
+  {"id":"spring-creek","name":"Spring Creek / 431 Causeway","center":[34.3634,-86.2805],"radius_mi":1.2,"source":"USGS GNIS 'Big Spring Creek' via topozone.com/?p=840594 (locals call it Spring Creek; crossed by the US-431 causeway per majorleaguefishing.com/news/2017-01-31-getting-to-know-guntersville)"},
+  {"id":"browns-creek","name":"Browns Creek","center":[34.38,-86.325],"radius_mi":1.5,"source":"USGS GNIS Browns Creek 34.3673,-86.3236 and Browns Bar 34.4009,-86.3278 (topozone/topoquest); center placed between them"},
+  {"id":"town-creek","name":"Town Creek","center":[34.4043,-86.2214],"radius_mi":1.0,"source":"USGS GNIS Town Creek, topozone.com/?p=849782"},
+  {"id":"honeycomb-creek","name":"Honeycomb Creek","center":[34.4312,-86.3464],"radius_mi":0.8,"source":"USGS GNIS Honeycomb Creek, topozone.com/alabama/marshall-al/stream/honeycomb-creek/"},
+  {"id":"buck-island","name":"Buck Island Flats","center":[34.3981,-86.2522],"radius_mi":1.0,"source":"USGS GNIS Buck Island (topoquest)"},
+  {"id":"siebold-creek","name":"Siebold Creek","center":[34.43,-86.27],"radius_mi":0.8,"source":"approximate, verify on map"},
+  {"id":"short-creek","name":"Short Creek","center":[34.385,-86.205],"radius_mi":0.8,"source":"approximate, verify on map"},
+  {"id":"main-river-ledges","name":"Main River Ledges (Dam to Honeycomb)","center":[34.425,-86.37],"radius_mi":1.5,"source":"approximate: between Guntersville Dam (GNIS reservoir point 34.4231,-86.3922) and Honeycomb Creek"},
+  {"id":"south-sauty","name":"South Sauty Creek","center":[34.46,-86.15],"radius_mi":1.2,"source":"approximate, verify on map"},
+  {"id":"north-sauty","name":"North Sauty Creek","center":[34.5715,-86.0916],"radius_mi":1.0,"source":"USGS GNIS North Sauty Creek (topoquest)"},
+  {"id":"roseberry-goose-pond","name":"Roseberry Creek / Goose Pond","center":[34.5681,-86.0764],"radius_mi":0.9,"source":"USGS GNIS Roseberry Creek (topoquest place 125939); Goose Pond Colony 34.5762,-86.0811"},
+  {"id":"comer-bridge","name":"BB Comer Bridge / Scottsboro","center":[34.655,-86.02],"radius_mi":1.2,"source":"approximate, verify on map"},
+  {"id":"mud-creek","name":"Mud Creek","center":[34.7351,-85.8869],"radius_mi":1.0,"source":"USGS GNIS Mud Creek (Hollywood quad, topoquest)"},
+  {"id":"crow-creek","name":"Crow Creek","center":[34.85,-85.80],"radius_mi":1.5,"source":"approximate, verify on map"}
+]

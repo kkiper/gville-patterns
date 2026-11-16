@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1720">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>G-Ville Patterns</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+</head>
+<body>
+  <div id="banner" class="banner" hidden></div>
+  <main id="view"></main>
+  <div id="sheet" class="sheet" aria-hidden="true">
+    <button class="sheet-grip" aria-label="Close panel"></button>
+    <div class="sheet-body"></div>
+  </div>
+  <nav class="tabs" aria-label="Main">
+    <button data-tab="map" class="active"><span class="ico">◎</span>Map</button>
+    <button data-tab="forecast"><span class="ico">☁</span>Forecast</button>
+    <button data-tab="water"><span class="ico">≈</span>Water</button>
+    <button data-tab="patterns"><span class="ico">☰</span>Patterns</button>
+    <button data-tab="log"><span class="ico">✚</span>Log</button>
+  </nav>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

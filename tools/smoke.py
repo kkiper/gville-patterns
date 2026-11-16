@@ -1,0 +1,75 @@
+# Headless smoke test of all tabs. Usage: python3 tools/smoke.py (server must be on :8765)
+import json, sys
+from playwright.sync_api import sync_playwright
+BASE = "http://localhost:8765/"
+fails = []
+def check(name, ok):
+    print(("PASS " if ok else "FAIL ") + name)
+    if not ok: fails.append(name)
+
+with sync_playwright() as p:
+    b = p.chromium.launch(executable_path="/usr/bin/google-chrome", args=["--no-sandbox"])
+    ctx = b.new_context(viewport={"width": 390, "height": 844}, permissions=["geolocation"],
+                        geolocation={"latitude": 34.40, "longitude": -86.27}, timezone_id="America/Chicago",
+                        service_workers="block")
+    ctx.route("https://unpkg.com/**", lambda r: r.abort())
+    ctx.route("https://**.basemaps.cartocdn.com/**", lambda r: r.abort())
+    page = ctx.new_page()
+    errors = []
+    page.on("pageerror", lambda e: errors.append(str(e)))
+    page.clock.set_fixed_time("2026-11-15T19:00:00Z")  # sample data covers Nov 15-16
+    page.goto(BASE); page.wait_for_timeout(800)
+    check("map tab shows offline-library message", "map library didn't load" in page.inner_text("#view"))
+    check("stale banner visible for old data", page.is_visible("#banner") and "last updated" in page.inner_text("#banner"))
+    bb = page.locator("#banner").bounding_box(); vb = page.locator("#view").bounding_box()
+    check("banner does not cover content", vb["y"] >= bb["y"] + bb["height"])
+    page.click(".tabs [data-tab=forecast]"); page.wait_for_timeout(400)
+    check("forecast shows 2 day cards", page.locator(".day").count() == 2)
+    page.locator(".day").first.click(); page.wait_for_timeout(400)
+    check("day sheet opens with hourly table", page.locator("#sheet.open table.hours tr").count() == 25)
+    page.click(".tabs [data-tab=water]"); page.wait_for_timeout(400)
+    v = page.inner_text("#view")
+    check("water shows pool elevation", "594." in v)
+    check("water shows missing water temp message", "No live reading" in v)
+    check("water shows generation fallback", "TVA's generation schedule isn't available" in v)
+    page.click(".tabs [data-tab=patterns]"); page.wait_for_timeout(400)
+    page.uncheck("#f-today"); page.wait_for_timeout(200)
+    check("patterns lists all 103 records", "103 patterns" in page.inner_text("#results").lower())
+    page.fill("#f-tmin", "90"); page.wait_for_timeout(200)
+    check("zero-match message", "No patterns match" in page.inner_text("#results"))
+    page.click(".tabs [data-tab=log]"); page.wait_for_timeout(400)
+    page.click("#new"); page.wait_for_timeout(800)
+    check("GPS location fills", "GPS" in page.inner_text("#loc-status"))
+    page.fill("#c-bait", "red lipless"); page.click("#c-save"); page.wait_for_timeout(600)
+    check("catch saved and listed", "1 catch" in page.inner_text("#view").lower())
+    with page.expect_download() as dl: page.click("#export")
+    path = dl.value.path(); page.wait_for_timeout(300)
+    page.set_input_files("#import", path); page.wait_for_timeout(600)
+    check("re-import dedupes", "0 added, 1 already here" in page.inner_text("#view"))
+    page.set_input_files("#import", files=[{"name": "bad.json", "mimeType": "application/json", "buffer": b"{nope"}]); page.wait_for_timeout(400)
+    check("bad import rejected", "isn't valid JSON" in page.inner_text("#view"))
+    # Location denied path
+    ctx2 = b.new_context(viewport={"width": 390, "height": 844}, service_workers="block")
+    ctx2.route("https://unpkg.com/**", lambda r: r.abort())
+    p2 = ctx2.new_page(); p2.goto(BASE + "#"); p2.wait_for_timeout(600)
+    p2.click(".tabs [data-tab=log]"); p2.wait_for_timeout(300); p2.click("#new"); p2.wait_for_timeout(11500)
+    check("denied location asks for coordinates", "nter the coordinates" in p2.inner_text("#loc-status"))
+    p2.fill("#c-lat", "34.41"); p2.fill("#c-lng", "-86.25"); p2.wait_for_timeout(100)
+    check("manual coordinates enable save without map", p2.is_enabled("#c-save"))
+    p2.click("#c-save"); p2.wait_for_timeout(500)
+    check("offline/no-map catch saved", "1 catch" in p2.inner_text("#view").lower())
+    # GPS case: coordinates are shown and editable
+    page.click(".tabs [data-tab=log]"); page.wait_for_timeout(300); page.click("#new"); page.wait_for_timeout(800)
+    check("GPS fills editable coordinates", page.input_value("#c-lat").startswith("34.4"))
+    page.locator(".sheet-grip").click()
+    # Past forecast days are not shown as Today
+    ctx3 = b.new_context(viewport={"width": 390, "height": 844}, service_workers="block", timezone_id="America/Chicago")
+    ctx3.route("https://unpkg.com/**", lambda r: r.abort())
+    p3 = ctx3.new_page(); p3.clock.set_fixed_time("2026-11-16T18:00:00Z"); p3.goto(BASE); p3.wait_for_timeout(600)
+    p3.click(".tabs [data-tab=forecast]"); p3.wait_for_timeout(400)
+    check("yesterday's forecast dropped", p3.locator(".day").count() == 1 and "16" in p3.locator(".day").first.inner_text())
+    page.screenshot(path="/tmp/smoke-log.png")
+    check("no page errors", not errors)
+    if errors: print(errors)
+    b.close()
+sys.exit(1 if fails else 0)
