@@ -27,3 +27,11 @@ test('dataBase reads straight from the GitHub repo on github.io', () => {
 test('dataBase stays local elsewhere', () => {
   assert.equal(dataBase({ hostname: 'localhost', pathname: '/' }), '');
 });
+
+import { needsLiveRefresh } from '../js/data.js';
+test('needsLiveRefresh after 1 hour or when missing', () => {
+  const now = new Date('2026-11-16T15:00:00Z');
+  assert.equal(needsLiveRefresh({ updated: '2026-11-16T14:30:00Z' }, now), false);
+  assert.equal(needsLiveRefresh({ updated: '2026-11-16T13:30:00Z' }, now), true);
+  assert.equal(needsLiveRefresh(null, now), true);
+});
