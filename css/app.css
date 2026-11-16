@@ -66,6 +66,7 @@ label { display: block; font-size: 13px; color: var(--muted); margin: 10px 0 4px
 .map-title { position: absolute; top: calc(env(safe-area-inset-top) + 12px); left: 12px; max-width: calc(100% - 150px); z-index: 900; background: rgba(24,35,47,.95);
   border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; font-weight: 700; }
 .leaflet-container { font: inherit; background: #0b1118; }
+.wind-streaks { position: absolute; inset: 0; z-index: 450; pointer-events: none; }
 .section-label { background: none; border: 0; box-shadow: none; color: var(--text); font-size: 11px; font-weight: 600; text-shadow: 0 1px 3px #000; }
 .leaflet-tooltip.section-label::before { display: none; }
 
