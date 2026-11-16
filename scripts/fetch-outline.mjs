@@ -38,8 +38,16 @@ async function main() {
     console.log(`${OUT} exists, skipping (use --force to refetch)`);
     return;
   }
+  const MIRRORS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
+  for (const mirror of MIRRORS) {
+    if (await tryMirror(mirror)) return;
+  }
+  console.error('fetch-outline: all Overpass mirrors failed; will retry next hour');
+}
+
+async function tryMirror(mirror) {
   try {
-    const res = await fetch('https://overpass-api.de/api/interpreter', {
+    const res = await fetch(mirror, {
       method: 'POST',
       headers: {
         'content-type': 'application/x-www-form-urlencoded',
@@ -53,9 +61,11 @@ async function main() {
     const polys = toPolygons(json.elements || []);
     if (!polys.length) throw new Error('No water polygons returned');
     writeFileSync(OUT, JSON.stringify({ type: 'Feature', properties: { source: 'OpenStreetMap contributors (ODbL)', fetched: new Date().toISOString() }, geometry: { type: 'MultiPolygon', coordinates: polys } }));
-    console.log(`Wrote ${OUT} with ${polys.length} polygons`);
+    console.log(`Wrote ${OUT} with ${polys.length} polygons from ${mirror}`);
+    return true;
   } catch (e) {
-    console.error(`fetch-outline: ${e.message} (keeping existing data)`);
+    console.error(`fetch-outline: ${mirror}: ${e.message}`);
+    return false;
   }
 }
 
