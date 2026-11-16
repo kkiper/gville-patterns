@@ -50,5 +50,5 @@ Run the tests with `npm test` (Node 22+). Preview locally with `python3 -m http.
 - Pool elevation and Scottsboro stage: NOAA National Water Prediction Service gauges [GVHA1](https://water.noaa.gov/gauges/gvha1) and [SCRA1](https://water.noaa.gov/gauges/scra1), with observed and forecast data from TVA
 - Discharge and water temperature: [USGS 03573500](https://waterdata.usgs.gov/monitoring-location/USGS-03573500), Tennessee River at Guntersville
 - Lake outline: © OpenStreetMap contributors (ODbL), via Overpass
-- Map tiles: © OpenStreetMap contributors © CARTO
+- Map tiles: Esri (dark gray canvas and World Imagery satellite)
 - Tournament patterns: summarized from Bassmaster, Major League Fishing / FLW, BassFan via Tackle Warehouse, In-Fisherman, Fishing North Alabama and News Channel 9 coverage. Each record links to its source.

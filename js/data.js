@@ -8,6 +8,14 @@ const FILES = {
   patterns: 'data/patterns.json',
 };
 
+// On GitHub Pages the site isn't republished when the hourly job commits new data,
+// so read data files straight from the repository (always current, CORS-enabled).
+export function dataBase(loc = globalThis.location) {
+  const m = /^([^.]+)\.github\.io$/.exec(loc?.hostname || '');
+  const repo = (loc?.pathname || '').split('/').filter(Boolean)[0];
+  return m && repo ? `https://raw.githubusercontent.com/${m[1]}/${repo}/main/` : '';
+}
+
 export function staleness(updatedISO, now = new Date()) {
   if (!updatedISO) return { stale: true, label: 'never' };
   const ms = now - Date.parse(updatedISO);
@@ -17,12 +25,17 @@ export function staleness(updatedISO, now = new Date()) {
 }
 
 export async function loadAll() {
-  const entries = await Promise.all(Object.entries(FILES).map(async ([k, url]) => {
+  const base = dataBase();
+  const get = async (url) => {
+    const res = await fetch(url, { cache: 'no-cache' });
+    if (!res.ok) throw new Error(res.status);
+    return res.json();
+  };
+  const entries = await Promise.all(Object.entries(FILES).map(async ([k, path]) => {
     try {
-      const res = await fetch(url, { cache: 'no-cache' });
-      return [k, res.ok ? await res.json() : null];
+      return [k, await get(base + path)];
     } catch {
-      return [k, null];
+      try { return [k, base ? await get(path) : null]; } catch { return [k, null]; } // fall back to the site's copy
     }
   }));
   return Object.fromEntries(entries);
