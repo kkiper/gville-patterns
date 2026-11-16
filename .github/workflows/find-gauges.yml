@@ -1,0 +1,26 @@
+name: Find nearby gauges (one-time)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        env:
+          TOKEN: ${{ github.token }}
+        run: git clone --depth 1 "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+      - name: List gauges
+        working-directory: repo
+        run: node tools/find-gauges.mjs
+      - name: Commit findings
+        working-directory: repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/gauge-discovery.json
+          git diff --cached --quiet || (git commit -m "data: gauge discovery" && git pull --rebase && git push)
