@@ -41,7 +41,11 @@ async function main() {
   try {
     const res = await fetch('https://overpass-api.de/api/interpreter', {
       method: 'POST',
-      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+        accept: 'application/json',
+        'user-agent': 'gville-patterns/1.0 (personal fishing app; https://github.com/kkiper/gville-patterns)',
+      },
       body: 'data=' + encodeURIComponent(QUERY),
     });
     if (!res.ok) throw new Error(`Overpass HTTP ${res.status}`);

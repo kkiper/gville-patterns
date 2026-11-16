@@ -16,8 +16,13 @@ page.on('response', async (res) => {
   try { sample = (await res.text()).slice(0, 1500); } catch { /* body unavailable */ }
   found.push({ url, status: res.status(), type, sample });
 });
-await page.goto(PAGE, { waitUntil: 'networkidle', timeout: 90000 });
-await page.waitForTimeout(5000);
+// The page polls continuously, so wait a fixed time rather than for the network to go quiet.
+try {
+  await page.goto(PAGE, { waitUntil: 'load', timeout: 90000 });
+} catch (e) {
+  console.log(`page load: ${e.message.split('\n')[0]} (keeping what was captured)`);
+}
+await page.waitForTimeout(20000);
 await browser.close();
 writeFileSync('data/tva-discovery.json', JSON.stringify({ page: PAGE, at: new Date().toISOString(), found }, null, 1));
 console.log(`Recorded ${found.length} JSON responses`);
